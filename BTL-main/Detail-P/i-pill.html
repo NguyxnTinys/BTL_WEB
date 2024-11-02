@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I PILL TABLET</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+    <script>
+        const images = [
+                        'images/i-pill-1.jpg',
+                        'images/i-pill-2.jpg',
+                        'images/i-pill-3.jpg'
+                        ];
+    </script>
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <div class="content-section">
+            <div class="image-block col-4">
+                <div class="product-image">
+                    <img src="images/i-pill-1.jpg" alt="I PILL TABLET">
+                </div>
+                <div class="dots-container">
+                    <span class="dot" onclick="changeImage(0)"></span>
+                    <span class="dot" onclick="changeImage(1)"></span>
+                    <span class="dot" onclick="changeImage(2)"></span>
+                </div>
+            
+                <div class="thumbnails">
+                    <img src="images/i-pill-1.jpg" alt="Thumbnail 1" class="thumbnail" onclick="changeImage(0)">
+                    <img src="images/i-pill-2.jpg" alt="Thumbnail 2" class="thumbnail" onclick="changeImage(1)">
+                    <img src="images/i-pill-3.jpg" alt="Thumbnail 3" class="thumbnail" onclick="changeImage(2)">
+                </div>
+            </div>
+    
+            <div class="info-block col-8">
+                <div class="section-one">
+                    <div class="product-name">
+                        <h1>I PILL TABLET</h1>   
+                    </div>
+
+                    <div class="important-info">
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-alt"></i>
+                            <span class="rating-number">4.7</span>
+                            <span class="review-count">(320)</span>
+                        </div>
+                        <div class="availability">
+                            <p class="stock-text">In Stock</p>
+                            <i class="fa fa-check-circle"></i>
+                        </div>
+                    </div>  
+                    <div class="price">£25.00</div>                               
+                </div>
+
+                <div class="section-two">
+                    <div class="info-container">
+                        <div class="info-row">
+                            <span class="info-label">Generic Name</span>
+                            <span class="info-value">Levonorgestrel</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Manufacturing Date</span>
+                            <span class="info-value">01/04/2024</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Expiry date</span>
+                            <span class="info-value">01/04/2026</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Location in store</span>
+                            <span class="info-value">A1-R2-S3</span>
+                        </div>
+                        
+                        <div class="info-row">
+                            <span class="info-label">Quantity</span>
+                            <span class="info-value">1 tablet</span>
+                        </div>
+
+                        <div class="info-row">
+                            <span class="info-label">Requires Prescription?</span>
+                            <span class="info-value">No</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Type of Medicine</span>
+                            <span class="info-value">Capsules</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="more-info">More Information</div>
+
+        <div class="tab-container">
+            <div class="tab-names">
+                <div class="tab-link tab-1 active" onclick="openTab(event, 'Tab1')">
+                    <h2>Description</h2>
+                </div>
+                <div class="tab-link tab-2" onclick="openTab(event, 'Tab2')">
+                    <h2>Ingredients</h2>
+                </div>
+                <div class="tab-link tab-3" onclick="openTab(event, 'Tab3')">
+                    <h2>Benefits</h2>
+                </div>
+                <div class="tab-link tab-4" onclick="openTab(event, 'Tab4')">
+                    <h2>Usage</h2>
+                </div>
+                <div class="tab-link tab-5" onclick="openTab(event, 'Tab5')">
+                    <h2>Precaution</h2>
+                </div>
+            </div>
+            <div class="tab-content">
+                <div id="Tab1" class="tab-content-item active">
+                    <p>The I PILL TABLET is an emergency contraceptive designed to prevent pregnancy after unprotected intercourse. It contains Levonorgestrel, a hormone that can delay ovulation, making it less likely for fertilization to occur.</p>
+                    <p>For best results, it should be taken as soon as possible after unprotected sex, preferably within 72 hours. The tablet is safe and effective when used as directed.</p>
+                </div>
+                <div id="Tab2" class="tab-content-item">
+                    <ul>
+                        <li>Levonorgestrel 1.5 mg</li>
+                        <li>Lactose</li>
+                        <li>Starch</li>
+                        <li>Talc</li>
+                        <li>Magnesium Stearate</li>
+                    </ul>                    
+                </div>
+                <div id="Tab3" class="tab-content-item">
+                    <ul>
+                        <li>Provides a reliable option for emergency contraception.</li>
+                        <li>Easy to use and readily available over the counter.</li>
+                        <li>Helps prevent unplanned pregnancy if used correctly and promptly.</li>
+                        <li>Offers peace of mind in unforeseen circumstances.</li>
+                    </ul>                                                                                 
+                </div>
+                <div id="Tab4" class="tab-content-item">
+                    <ul>
+                        <li>Take one tablet as soon as possible after unprotected intercourse.</li>
+                        <li>If you vomit within two hours of taking the tablet, consult a healthcare provider for further instructions.</li>
+                    </ul>                    
+                </div>
+                <div id="Tab5" class="tab-content-item">
+                    <ul>
+                        <li>Not suitable for individuals under 16 years old without medical advice.</li>
+                        <li>Consult a doctor before use if pregnant or nursing.</li>
+                        <li>This tablet is not intended as a regular contraceptive method.</li>
+                        <li>Keep out of reach of children.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-details">
+            <div class="visible-content">
+                <div class="info-item">
+                    <div class="field-label">Item Weight</div>
+                    <div class="field-value">60 g</div>
+                </div>
+                <div class="info-item">
+                    <div class="field-label">Country Of Origin</div>
+                    <div class="field-value">India</div>
+                </div>
+            </div>
+            <div class="hidden-content" style="display: none;">
+                <div class="info-item">
+                    <div class="field-label">HSN Code</div>
+                    <div class="field-value">1800229898</div>
+                </div>
+                <div class="info-item">
+                    <div class="field-label">Customer care no</div>
+                    <div class="field-value">1800229899</div>
+                </div>
+                <div class="info-item">
+                    <div class="field-label">Customer care email id</div>
+                    <div class="field-value">consumercare@piramal.com</div>
+                </div>
+                <div class="info-item">
+                    <div class="field-label">Name of Manufacturer</div>
+                    <div class="field-value">Piramal Pharma Ltd </div>
+                </div>
+                <div class="info-item">
+                    <div class="field-label">Address of Manufacturer</div>
+                    <div class="field-value">Piramal Ananta, Agastya Corporate Park, Opposite Fire Brigade, Kamani Junction, LBS Marg, Kurla West, Mumbai-4000</div>
+                </div>
+                <div class="info-item">
+                    <div class="field-label">Contact of Manufacturer</div>
+                    <div class="field-value">+89 212 111-5050</div>
+                </div>
+            </div>
+            
+            <div class="show-more">
+                <button>
+                    <span onclick="showmorelessManufacturer()" id="moreless">
+                        Show more <img src="images/chevron_down_pink.svg">
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

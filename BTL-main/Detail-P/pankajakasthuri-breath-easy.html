@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pankaja Kasthuri Breath Easy 400 gm</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+
+    <script>
+        const images = [
+                        'images/pankajakasthuri-1.jpg',
+                        'images/pankajakasthuri-2.jpg',
+                        'images/pankajakasthuri-3.jpg'
+                        ];
+    </script>
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <div class="content-section">
+            <div class="image-block col-4">
+                <div class="product-image">
+                    <img src="images/pankajakasthuri-1.jpg" alt="Pankajakasthuri 400mg">
+                </div>
+                <div class="dots-container">
+                    <span class="dot" onclick="changeImage(0)"></span>
+                    <span class="dot" onclick="changeImage(1)"></span>
+                    <span class="dot" onclick="changeImage(2)"></span>
+                </div>
+            
+                <div class="thumbnails">
+                    <img src="images/pankajakasthuri-1.jpg" alt="Thumbnail 1" class="thumbnail" onclick="changeImage(0)">
+                    <img src="images/pankajakasthuri-2.jpg" alt="Thumbnail 2" class="thumbnail" onclick="changeImage(1)">
+                    <img src="images/pankajakasthuri-3.jpg" alt="Thumbnail 3" class="thumbnail" onclick="changeImage(2)">
+                </div>
+            </div>
+    
+            <div class="info-block col-8">
+                <div class="section-one">
+                    <div class="product-name">
+                        <h1>Pankajakasthuri Breathe Easy 400 gm</h1>   
+                    </div>
+                    
+                    <div class="important-info">
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-alt"></i>
+                            <span class="rating-number">4.4</span>
+                            <span class="review-count">(2312)</span>
+                        </div>
+                        <div class="availability">
+                            <p class="stock-text">In Stock</p>
+                            <i class="fa fa-check-circle"></i>
+                        </div>
+                    </div>  
+                    <div class="price">£16.00</div>                              
+                </div>
+
+                <div class="section-two">
+                    <div class="info-container">
+                        <div class="info-row">
+                            <span class="info-label">Generic Name</span>
+                            <span class="info-value">Ayurvedic</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Manufacturing Date</span>
+                            <span class="info-value">19/10/2022</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Expiry date</span>
+                            <span class="info-value">19/10/2024</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Location in store</span>
+                            <span class="info-value">Q-B2</span>
+                        </div>
+                        
+                        <div class="info-row">
+                            <span class="info-label">Quantity</span>
+                            <span class="info-value">50 units</span>
+                        </div>
+
+                        <div class="info-row">
+                            <span class="info-label">Requires Prescription?</span>
+                            <span class="info-value">Yes</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Type of Medicine</span>
+                            <span class="info-value">Powder</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="more-info">More Information</div>
+
+        <div class="tab-container">
+            <div class="tab-names">
+                <div class="tab-link tab-1 active" onclick="openTab(event, 'Tab1')">
+                    <h2>Description</h2>
+                </div>
+                <div  class="tab-link tab-2" onclick="openTab(event, 'Tab2')">
+                    <h2>Ingredients</h2>
+                </div>
+                <div class="tab-link tab-3" onclick="openTab(event, 'Tab3')">
+                    <h2>Benefits</h2>
+                </div>
+                <div class="tab-link tab-4" onclick="openTab(event, 'Tab4')">
+                    <h2>Usage</h2>
+                </div>
+                <div class="tab-link tab-5" onclick="openTab(event, 'Tab5')">
+                    <h2>Precaution</h2>
+                </div>
+            </div>
+            <div class="tab-content">
+                <div id="Tab1" class="tab-content-item active">
+                    <p>Breathe Easy is a combination of 15 herbs and natural ingredients in specific composition made as per International standards. Breathe Eazy dilates the respiratory tract making the affected breathe easy. It prevents the occurrence of hyper sensitivity reaction and builds up strong immunity against allergy, thus effecting a near complete cure for Asthma, Bronchitis, Wheezing, Eosinophilia attacks, Sinusitis and Rhinitis. There will be marked decrease in IgE levels (Immunoglobulin_E) which is the indication of the allergic response.</p>
+                </div>
+                <div id="Tab2" class="tab-content-item">
+                    <p>Maricham, Pippali, Viswam, Ela, Twag, Aswagandha, Amlika, Jeeraka, Vilwa, Vasaka, Hareetaki, Vibheetaki, Kasagni, Yojanavalli, Sugar candy</p>
+                </div>
+                <div id="Tab3" class="tab-content-item">
+                    <ul>
+                        <li>Dialates respiratory tract</li>
+                        <li>Clears phlegm out of lungs</li>
+                        <li>Imparts resistance against recurrent respiratory infections</li>
+                        <li>Improves respiratory strength and rejuvenates lungs</li>
+                    </ul>
+                </div>
+                <div id="Tab4" class="tab-content-item">
+                    <ul>
+                        <li>Adults: One tablespoon (15 g) twice daily after food (Breakfast and dinner).</li>
+                        <li>Children: Half the adult dosage. (Advised to have it mixed with warm water/milk or honey).</li>
+                    </ul>
+                </div>
+                <div id="Tab5" class="tab-content-item">
+                    <ul>
+                        <li>Contains Sugar candy</li>
+                        <li>Not suitable for Diabetic patients</li>
+                        <li>Contains spicy ingredients - should not be used in empty stomach</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-details">
+            <div class="visible-content">
+                <div class="info-item">
+                    <div class="field-label">Item Weight</div>
+                    <div class="field-value">400 g</div>
+                </div>
+                <div class="info-item">
+                    <div class="field-label">Pack Size</div>
+                    <div class="field-value">100 g (20 servings)</div>
+                </div>
+                <div class="info-item">
+                    <div class="field-label">Country Of Origin</div>
+                    <div class="field-value">India</div>
+                </div>
+            </div>
+            <div class="hidden-content" style="display: none;">
+                <div class="info-item">
+                    <div class="field-label">HSN Code</div>
+                    <div class="field-value">30049011</div>
+                </div>
+                <div class="info-item">
+                    <div class="field-label">Name of Manufacturer</div>
+                    <div class="field-value">Pankajakasthuri Herbals India Pvt Ltd</div>
+                </div>
+                <div class="info-item">
+                    <div class="field-label">Address of Manufacturer</div>
+                    <div class="field-value">Poovachal, Trivandrum-695575, Kerala</div>
+                </div>
+                <div class="info-item">
+                    <div class="field-label">Contact of Manufacturer</div>
+                    <div class="field-value">+91 123 456 7890</div>
+                </div>
+                <div class="info-item">
+                    <div class="field-label">Approval Status</div>
+                    <div class="field-value"> Approved by AYUSH (Department of Ayurveda, Yoga & Naturopathy, Unani, Siddha, and Homoeopathy, India)</div>
+                </div>
+            </div>
+            
+            <div class="show-more">
+                <button>
+                    <span onclick="showmorelessManufacturer()" id="moreless">
+                        Show more <img src="images/chevron_down_pink.svg">
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

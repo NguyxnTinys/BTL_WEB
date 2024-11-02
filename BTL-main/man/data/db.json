@@ -1,0 +1,139 @@
+{
+    "medicines": [
+    { 
+        "id": 1, 
+        "name": "Aspirin", 
+        "price": 100, 
+        "expiry": "2025-08-01", 
+        "stock": 30,
+        "description": "Aspirin là một loại thuốc chống viêm không steroid (NSAID) được dùng để giảm đau, hạ sốt hoặc giảm viêm.",
+        "image": "/man/img/Aspirin.png" 
+    },
+    { 
+        "id": 2, 
+        "name": "Paracetamol", 
+        "price": 120, 
+        "expiry": "2024-12-15", 
+        "stock": 45,
+        "description": "Paracetamol là một loại thuốc giảm đau và hạ sốt không gây nghiện, được dùng để điều trị sốt và đau nhẹ đến trung bình.",
+        "image": "/man/img/Paracetamol.png" 
+    },
+    { 
+        "id": 3, 
+        "name": "Ibuprofen", 
+        "price": 150, 
+        "expiry": "2026-05-20", 
+        "stock": 60,
+        "description": "Ibuprofen là một loại thuốc chống viêm không steroid (NSAID) dùng để giảm đau, giảm viêm và hạ sốt.",
+        "image": "/man/img/Ibuprofen.png" 
+    },
+    { 
+        "id": 4, 
+        "name": "Amoxicillin", 
+        "price": 180, 
+        "expiry": "2025-10-30", 
+        "stock": 25,
+        "description": "Amoxicillin là một loại kháng sinh penicillin được dùng để điều trị nhiều loại nhiễm trùng do vi khuẩn.",
+        "image": "/man/img/Amoxicillin.png" 
+    },
+    { 
+        "id": 5, 
+        "name": "Ciprofloxacin", 
+        "price": 200, 
+        "expiry": "2026-03-12", 
+        "stock": 50,
+        "description": "Ciprofloxacin là một loại kháng sinh dùng để điều trị các loại nhiễm trùng khác nhau.",
+        "image": "/man/img/Ciprofloxacin.png" 
+    },
+    { 
+        "id": 6, 
+        "name": "Metformin", 
+        "price": 90, 
+        "expiry": "2025-07-22", 
+        "stock": 80,
+        "description": "Metformin là một loại thuốc được dùng để điều trị bệnh tiểu đường loại 2.",
+        "image": "/man/img/Metformin.png" 
+    },
+    { 
+        "id": 7, 
+        "name": "Simvastatin", 
+        "price": 130, 
+        "expiry": "2026-11-18", 
+        "stock": 40,
+        "description": "Simvastatin là một loại thuốc được dùng để kiểm soát cholesterol cao.",
+        "image": "/man/img/Simvastatin.png" 
+    },
+    { 
+        "id": 8, 
+        "name": "Atorvastatin", 
+        "price": 160, 
+        "expiry": "2027-01-08", 
+        "stock": 35,
+        "description": "Atorvastatin được dùng để giảm cholesterol và mức triglyceride.",
+        "image": "/man/img/Atorvastatin.png" 
+    },
+    { 
+        "id": 9, 
+        "name": "Lisinopril", 
+        "price": 110, 
+        "expiry": "2026-04-02", 
+        "stock": 20,
+        "description": "Lisinopril được dùng để điều trị cao huyết áp và suy tim.",
+        "image": "/man/img/Lisinopril.png" 
+    },
+    { 
+        "id": 10, 
+        "name": "Clopidogrel", 
+        "price": 190, 
+        "expiry": "2025-09-11", 
+        "stock": 55,
+        "description": "Clopidogrel được dùng để ngăn ngừa cục máu đông.",
+        "image": "/man/img/Clopidogrel.png"
+    },
+    { 
+        "id": 11, 
+        "name": "Losartan", 
+        "price": 170, 
+        "expiry": "2024-11-30", 
+        "stock": 60,
+        "description": "Losartan được dùng để điều trị cao huyết áp.",
+        "image": "/man/img/Losartan.png" 
+    },
+    { 
+        "id": 12, 
+        "name": "Omeprazole", 
+        "price": 115, 
+        "expiry": "2026-08-14", 
+        "stock": 70,
+        "description": "Omeprazole được dùng để điều trị bệnh trào ngược dạ dày thực quản (GERD).",
+        "image": "/man/img/Omeprazole.png" 
+    },
+    { 
+        "id": 13, 
+        "name": "Hydrochlorothiazide", 
+        "price": 125, 
+        "expiry": "2027-02-05", 
+        "stock": 65,
+        "description": "Hydrochlorothiazide được dùng để điều trị cao huyết áp.",
+        "image": "/man/img/Hydrochlorothiazide.png" 
+    },
+    { 
+        "id": 14, 
+        "name": "Gabapentin", 
+        "price": 140, 
+        "expiry": "2026-06-28", 
+        "stock": 50,
+        "description": "Gabapentin được dùng để điều trị đau dây thần kinh và động kinh.",
+        "image": "/man/img/Gabapentin.png" 
+    },
+    { 
+        "id": 15, 
+        "name": "Furosemide", 
+        "price": 105, 
+        "expiry": "2025-12-25", 
+        "stock": 85,
+        "description": "Furosemide được dùng để giảm lượng nước dư thừa trong cơ thể.",
+        "image": "/man/img/Furosemide.png" 
+    }
+    ]
+}

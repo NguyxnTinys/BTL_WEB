@@ -1,0 +1,181 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+/* Sidebar */
+.sidebar {
+    margin-top: 60px;
+    flex: 0 0 25%;
+    max-height: 600px;
+    overflow-y: auto;
+    max-width: 25%;
+    background-color: #f9f9f9;
+    padding: 20px;
+}
+
+.profile-card {
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.profile-card img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.profile-card h2 {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.menu {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu li {
+    padding: 10px 0;
+    font-size: 16px;
+}
+
+/* Profile Content */
+.profile-content {
+    margin-top: 60px;
+    flex: 1;
+    padding: 20px;
+}
+
+.profile-content h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.profile-details {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.profile-picture {
+    flex: 1;
+    max-width: 150px;
+    text-align: center;
+}
+
+.profile-picture img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.info-form {
+    flex: 2;
+}
+
+.info-form label {
+    display: block;
+    margin-top: 10px;
+}
+
+.info-form input, .info-form select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.info-form button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.contact-info p {
+    margin: 10px 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .profile-content {
+        flex: 1 0 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .profile-details {
+        flex-direction: column;
+    }
+
+    .profile-picture, .info-form, .contact-info {
+        max-width: 100%;
+    }
+
+    .menu {
+       display: flex;
+       justify-content: center;
+       flex-direction: column;
+    }
+}
+
+.menu__container ul{
+    list-style: none;
+}
+
+.menu__container ul a{
+    color: #000;
+}
+
+.menu__container .icon-profile{
+    font-size: 1.4rem;
+    margin-right: 15px;
+}
+
+.profile-container{
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+.profile-family{
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}

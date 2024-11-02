@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CeraVe Moisturizing Cream 340g - Long-Lasting Hydration</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+
+    <script>
+        const images = [
+                        'images/cerave-1.jpg',
+                        'images/cerave-2.jpg',
+                        'images/cerave-3.jpg'
+                        ];
+    </script>
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <div class="content-section">
+            <div class="image-block col-4">
+                <div class="product-image">
+                    <img src="images/cerave-1.jpg" alt="CeraVe Moisturizing Cream 340g">
+                </div>
+                <div class="dots-container">
+                    <span class="dot" onclick="changeImage(0)"></span>
+                    <span class="dot" onclick="changeImage(1)"></span>
+                    <span class="dot" onclick="changeImage(2)"></span>
+                </div>
+                <div class="thumbnails">
+                    <img src="images/cerave-1.jpg" alt="Thumbnail 1" class="thumbnail" onclick="changeImage(0)">
+                    <img src="images/cerave-2.jpg" alt="Thumbnail 2" class="thumbnail" onclick="changeImage(1)">
+                    <img src="images/cerave-3.jpg" alt="Thumbnail 3" class="thumbnail" onclick="changeImage(2)">
+                </div>
+            </div>
+
+            <div class="info-block col-8">
+                <div class="section-one">
+                    <div class="product-name">
+                        <h1>CeraVe Moisturizing Cream 340g</h1>   
+                    </div>
+
+                    <div class="important-info">
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-alt"></i>
+                            <span class="rating-number">4.5</span>
+                            <span class="review-count">(32289)</span>
+                        </div>
+                        <div class="availability">
+                            <p class="stock-text">In Stock</p>
+                            <i class="fa fa-check-circle"></i>
+                        </div>
+                    </div>
+                    <div class="price">£14.99</div>                               
+                </div>
+
+                <div class="section-two">
+                    <div class="info-container">
+                        <div class="info-row">
+                            <span class="info-label">Generic Name</span>
+                            <span class="info-value">Topical emollients</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Manufacturing Date</span>
+                            <span class="info-value">09/01/2024</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Expiry date</span>
+                            <span class="info-value">09/01/2026</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Location in store</span>
+                            <span class="info-value">A2-L3-S5</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Quantity</span>
+                            <span class="info-value">320 units</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Requires Prescription?</span>
+                            <span class="info-value">No</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Type of Product</span>
+                            <span class="info-value">Creams</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="more-info">More Information</div>
+
+        <div class="tab-container">
+            <div class="tab-names">
+                <div class="tab-link tab-1 active" onclick="openTab(event, 'Tab1')">
+                    <h2>Description</h2>
+                </div>
+                <div class="tab-link tab-2" onclick="openTab(event, 'Tab2')">
+                    <h2>Ingredients</h2>
+                </div>
+                <div class="tab-link tab-3" onclick="openTab(event, 'Tab3')">
+                    <h2>Benefits</h2>
+                </div>
+                <div class="tab-link tab-4" onclick="openTab(event, 'Tab4')">
+                    <h2>Usage</h2>
+                </div>
+                <div class="tab-link tab-5" onclick="openTab(event, 'Tab5')">
+                    <h2>Precaution</h2>
+                </div>
+            </div>
+
+            <div class="tab-content">
+                <div id="Tab1" class="tab-content-item active">
+                    <p>CeraVe Moisturizing Cream is a deeply hydrating, dermatologist-developed formula designed to restore and strengthen the skin’s natural barrier. Infused with three essential ceramides and hyaluronic acid, it locks in moisture, providing lasting hydration that leaves skin feeling soft and supple throughout the day. </p>
+                    <p>What sets CeraVe Moisturizing Cream apart is its MVE (Multivesicular Emulsion) Technology, which allows for controlled release of hydrating ingredients over 24 hours, ensuring a steady stream of moisture. The cream is non-comedogenic, fragrance-free, and gentle enough for sensitive skin, making it suitable for use on both the face and body. Its rich, non-greasy texture absorbs quickly, creating a smooth finish that makes it easy to incorporate into any skincare routine without leaving a sticky residue.  </p>
+                </div>
+                <div id="Tab2" class="tab-content-item">
+                    <p>Aqua/Water, Glycerin, Cetearyl Alcohol, Caprylic/Capric Triglyceride, Cetyl Alcohol, Ceteareth-20, Petrolatum, Dimethicone, Phenoxyethanol, Behentrimonium Methosulfate, Potassium Phosphate, Ethylhexylglycerin, Sodium Lauroyl Lactylate, Disodium EDTA, Dipotassium Phosphate, Ceramide NP, Ceramide AP, Phytoshingosine, Cholesterol, Xanthan Gum, Carbomer, Sodium Hyaluronate, Tocopherol, Ceramide EOP</p>
+                </div>
+                <div id="Tab3" class="tab-content-item">
+                    <ul>
+                        <li>Provides long-lasting hydration for dry and sensitive skin</li>
+                        <li>Helps restore the skin's natural protective barrier</li>
+                        <li>Non-greasy formula absorbs quickly into the skin</li>
+                        <li>Fragrance-free, making it suitable for sensitive skin</li>
+                    </ul>
+                </div>
+                <div id="Tab4" class="tab-content-item">
+                    <p>Apply liberally to the face and body, as needed, or as recommended by a healthcare provider. Can be used morning and night for optimal hydration results.</p>
+                </div>
+                <div id="Tab5" class="tab-content-item">
+                    <ul>
+                        <li>For external use only.</li>
+                        <li>Avoid contact with eyes.</li>
+                        <li>If irritation occurs, discontinue use.</li>
+                        <li>Store in a cool, dry place.</li>
+                        <li>Consult a dermatologist if you have specific skin concerns.</li>
+                    </ul>                    
+                </div>
+            </div>
+        </div>
+
+        <div class="product-details">
+            <div class="visible-content">
+                <div class="info-item">
+                    <div class="field-label">Item Weight</div>
+                    <div class="field-value">340 g</div>
+                </div>
+                <div class="info-item">
+                    <div class="field-label">Country Of Origin</div>
+                    <div class="field-value">United States</div>
+                </div>
+            </div>
+            <div class="hidden-content" style="display: none;">
+                <div class="info-item">
+                    <div class="field-label">HSN Code</div>
+                    <div class="field-value">30049011</div>
+                </div>
+                <div class="info-item">
+                    <div class="field-label">Customer care no</div>
+                    <div class="field-value">91-8080177000</div>
+                </div>
+                <div class="info-item">
+                    <div class="field-label">Customer care email id</div>
+                    <div class="field-value">info@cerave.com</div>
+                </div>
+                <div class="info-item">
+                    <div class="field-label">Name of Manufacturer</div>
+                    <div class="field-value">CeraVe, L'Oréal Group</div>
+                </div>
+                <div class="info-item">
+                    <div class="field-label">Address of Manufacturer</div>
+                    <div class="field-value">100 Park Ave, New York, NY 10017, United States</div>
+                </div>
+                <div class="info-item">
+                    <div class="field-label">Contact of Manufacturer</div>
+                    <div class="field-value">+1 800 275-4574</div>
+                </div>
+            </div>
+            
+            <div class="show-more">
+                <button>
+                    <span onclick="showmorelessManufacturer()" id="moreless">
+                        Show more <img src="images/chevron_down_pink.svg">
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

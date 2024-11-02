@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Web Medical Management - Efficient Pharmacy Management">
+    <link rel="icon" type="image/jpg" href="/public/assets/image/logo.jpg">
+    <meta property="og:description" content="Manage your pharmacy with ease. Track inventory, handle prescriptions, and serve your patients effectively.">
+    <meta property="og:image" content="public/assets/image/logo.jpg">
+    <meta property="og:url" content="https://example.com/pharmacy-management">
+    <meta property="og:type" content="website">
+    <title>Medical Management </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/formauth/assets/style/profile.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/formauth/assets/style/footer.css">
+    <link rel="stylesheet" href="/productshop/base.css">
+    <link rel="stylesheet" href="/formauth/assets/style/nav.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+            <!-- Logo bên trái -->
+            <div class="logo">
+                <img alt="Company Logo" src="/public/assets/image/logo.jpg" width="60px" height="60px"/>
+            </div>
+    
+            <!-- Nút toggle cho mobile -->
+            <button class="navbar-toggler d-lg-none" type="button" aria-label="Toggle navigation" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon">
+                    <img src="/public/assets/icons/SVG/8666802_menu_navigation_icon.svg" alt="">
+                </span>
+            </button>
+    
+            <!-- Navbar chính giữa -->
+            <nav class="navbar collapse" id="navbarNav">
+                <div class="navbar-links">
+                    <a href="/public/info/home/index.html" class="active">Trang chủ</a>
+                    <a href="/productshop/shopproduct.html">Cửa hàng</a>
+                    <a href="/productshop/sick.html">Tra cứu bệnh</a>
+                    <a href="/man/html/index_m.html">Quản lý</a>
+                </div>
+            </nav>
+    
+            <!-- Sign-in bên phải -->
+            <div class="user">
+                <a class="user-icon" href="#">
+                    <img src="/public/assets/icons/SVG/9024006_user_circle_fill_icon.svg" alt="">
+                </a>
+                <div class="navbar-signin">
+                    <a class="sign-in" href="/formauth/index.html">Sign in</a>
+                </div>
+            </div>
+        </div>
+    </header> 
+
+    <div class="navbar-mobile" id="navbarNavMobile">
+        <div class="navbar-links">
+            <a href="/public/info/home/index.html" class="active">Trang chủ</a>
+            <a href="/productshop/shopproduct.html">Cửa hàng</a>
+            <a href="/productshop/sick.html">Tra cứu bệnh</a>
+            <a href="/man/html/index_m.html">Quản lý</a>
+        </div>
+    </div>  
+
+
+
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="profile-card">
+                <div class="user-icon">
+                    <img src="/formauth/assets/img/user.png" alt="User Icon">
+                </div>
+                <h2>Khách Hàng</h2>
+            </div>
+            <dev class="menu">
+                <div class="menu__container">
+                    <div class="profile-container">
+                        <ul>
+                            <li>
+                                <a href=""><i class=' icon-profile bx bx-user'></i>Thông tin cá nhân</a>
+                            </li>
+                            <li>
+                                <a href=""><i class='icon-profile bx bx-user'></i>Lịch sử đơn hàng</a>
+                            </li>
+                            <li>
+                                <a href=""><i class='icon-profile bx bx-user'></i>Mã giảm giá</a>
+                            </li>
+                            <li>
+                                <a href=""><i class='icon-profile bx bx-user'></i>Thông báo của tôi</a>
+                            </li>
+                            <li>
+                                <a href=""><i class='icon-profile bx bx-user'></i>Quản lý thanh toán</a>
+                            </li>
+                        </ul>
+                    </div>
+    
+                    <div class="profile-family">
+                        <ul>
+                            <li>
+                                <a href=""><i class='icon-profile bx bx-user'></i>Hồ sơ gia đình</a>
+                            </li>
+                            <li>
+                                <a href=""><i class='icon-profile bx bx-user'></i>Chi tiêu sức khỏe</a>
+                            </li>
+                            <li>
+                                <a href=""><i class='icon-profile bx bx-user'></i>Công cụ sức khỏe</a>
+                            </li>
+                            <li>
+                                <a href=""><i class='icon-profile bx bx-user'></i>Đơn thuốc của tôi</a>
+                            </li>
+                            <li>
+                                <a href=""><i class='icon-profile bx bx-history' ></i>Lịch sử tư vấn thuốc</a>
+                            </li>
+                            <li>
+                                <a href=""><i class='icon-profile bx bx-user'></i>Kết quả xét nghiệm</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="profile-seting">
+                        <ul>
+                            <li>
+                                <a href=""><i class='icon-profile bx bx-cog'></i>Cài đặt</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </dev>
+        </div>
+
+        <!-- Profile Content -->
+        <div class="profile-content">
+            <h1>Thông tin cá nhân</h1>
+            <div class="profile-details">
+                <div class="profile-picture">
+                    <img src="/formauth/assets/img/user.png" alt="User Avatar">
+                    <button>Cập nhật ảnh mới</button>
+                   
+                </div>
+                <div class="info-form">
+                    <label for="name">Họ và tên</label>
+                    <input type="text" id="name" value="Khách hàng">
+
+                    <label for="birthdate">Ngày sinh</label>
+                    <input type="date" id="birthdate">
+
+                    <label for="gender">Giới tính</label>
+                    <select id="gender">
+                        <option value="">Giới tính</option>
+                        <option value="male">Nam</option>
+                        <option value="female">Nữ</option>
+                        <option value="other">Khác</option>
+                    </select>
+
+                    <button>Lưu thay đổi</button>
+                </div>
+                <div class="contact-info">
+                    <p>Số điện thoại: ***** *** 921</p>
+                    <p>Email: <a href="#">Cập nhật</a></p>
+                    <p>Mật khẩu: <a href="#">Đổi mật khẩu</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+
+</body>
+</html>

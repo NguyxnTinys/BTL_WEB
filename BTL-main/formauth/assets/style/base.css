@@ -1,0 +1,41 @@
+
+
+:root {
+    --bg-color: rgb(150, 150, 150);
+    --second-bg-color: rgb(247, 247, 247);
+    --text-color: rgb(0, 0, 0);
+    --text-second-cl: rgb(255, 255, 255);
+    --primary-color: rgb(102, 189, 255);
+    --secondary-color: rgb(20, 181, 255);
+    --accent-color: rgb(229, 250, 255);
+    --text-headings: "Nunito", sans-serif;
+    --text-body: 'Inter', sans-serif;
+}
+
+.input-box.invalid input {
+    border-color: red;
+}
+
+.input-box.invalid .message {
+    color: red;
+    font-size: 0.85em;
+    margin-top: 5px;
+    margin-left: 5px;
+    display: block;
+}
+
+
+
+.form-box {
+    display: none; 
+}
+
+.form-box.active {
+    display: block; 
+}
+
+.chatbot.active {
+    display: block;
+}
+
+

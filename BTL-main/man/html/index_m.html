@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:title" content="Web Medical Management - Efficient Pharmacy Management">
+        <link rel="icon" type="image/jpg" href="/public/assets/image/logo.jpg">
+        <meta property="og:description" content="Manage your pharmacy with ease. Track inventory, handle prescriptions, and serve your patients effectively.">
+        <meta property="og:image" content="public/assets/image/logo.jpg">
+        <meta property="og:url" content="https://example.com/pharmacy-management">
+        <meta property="og:type" content="website">
+        <title>Medical Management </title>
+        <!-- Liên kết tới file CSS -->
+        <link rel="stylesheet" href="/man/css/styles_m.css">
+        <link rel="stylesheet" href="/formauth/assets/style/nav.css">
+        <!-- Link tới Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </head>
+
+    <body>
+        <header class="header">
+            <div class="container-fluid d-flex justify-content-between align-items-center">
+                <!-- Logo bên trái -->
+                <div class="logo">
+                    <img alt="Company Logo" src="/public/assets/image/logo.jpg" width="60px" height="60px"/>
+                </div>
+        
+                <!-- Nút toggle cho mobile -->
+                <button class="navbar-toggler d-lg-none" type="button" aria-label="Toggle navigation" data-toggle="collapse" data-target="#navbarNav">
+                    <span class="navbar-toggler-icon">
+                        <img src="/public/assets/icons/SVG/8666802_menu_navigation_icon.svg" alt="">
+                    </span>
+                </button>
+        
+                <!-- Navbar chính giữa -->
+                <nav class="navbar collapse" id="navbarNav">
+                    <div class="navbar-links">
+                        <a href="/public/info/home/index.html">Trang chủ</a>
+                        <a href="/productshop/shopproduct.html">Cửa hàng</a>
+                        <a href="/productshop/sick.html">Tra cứu bệnh</a>
+                        <a href="/man/html/index_m.html" class="active">Quản lý</a>
+                    </div>
+                </nav>
+        
+                <!-- Sign-in bên phải -->
+                <div class="user">
+                    <a class="user-icon" href="/formauth/profile.html">
+                        <img src="/public/assets/icons/SVG/9024006_user_circle_fill_icon.svg" alt="">
+                    </a>
+                    <div class="navbar-signin">
+                        <a class="sign-in" href="/formauth/index.html">Sign in</a>
+                    </div>
+                </div>
+            </div>
+        </header>  
+    
+        <div class="navbar-mobile" id="navbarNavMobile">
+            <div class="navbar-links">
+                <a href="/public/info/home/index.html">Trang chủ</a>
+                <a href="/productshop/shopproduct.html">Cửa hàng</a>
+                <a href="/productshop/sick.html">Tra cứu bệnh</a>
+                <a href="/man/html/index_m.html" class="active">Quản lý</a>
+            </div>
+        </div>
+
+        <main>
+            <section class="grid-container">
+                <div class="boxes col-10">
+                    <div class="revenue-day">
+                        <h3 class="text">Doanh thu</h3>
+                        <p class="number" id="revenue-amount"></p>
+                    </div>
+
+                    <div class="low-supplies">
+                        <h3 class="text">Thuốc còn ít</h3>
+                        <div class="medicine">
+
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="dropdown col-2">
+                    <button class="button">+</button>
+                    <div class="dropdown-container">
+                        <a href="index_a.html">Thêm</a>
+                        <a href="index_cr.html">Thay đổi/
+                            Xoá</a> 
+                    </div>
+                </div>
+            </section>
+
+            <section class="chart">
+                <div class="my-chart">
+                    <h3>BIểu đồ</h3>
+                    <canvas id="chart-canvas"></canvas>
+                </div>
+
+                <div class="pagination-bar">
+                    <button id="weeklyBtn" class="pag-weekly">Tuần</button>
+                    <button id="monthlyBtn" class="pag-monthly">Tháng</button>
+                    <button id="yearlyBtn" class="pag-yearly">Năm</button>
+                </div>
+            </section>
+        </main>
+
+        <script src="/man/js/script_m.js"></script> 
+        <script src="/man/js/script_m_revenue.js"></script>
+        <script src="/man/js/script_m_low.js"></script>
+    </body> 
+</html>

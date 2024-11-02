@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Web Medical Management - Efficient Pharmacy Management">
+    <link rel="icon" type="image/jpg" href="/public/assets/image/logo.jpg">
+    <meta property="og:description" content="Manage your pharmacy with ease. Track inventory, handle prescriptions, and serve your patients effectively.">
+    <meta property="og:image" content="public/assets/image/logo.jpg">
+    <meta property="og:url" content="https://example.com/pharmacy-management">
+    <meta property="og:type" content="website">
+    <title>Medical Management </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/man/css/styles_a.css">
+    <link rel="stylesheet" href="/formauth/assets/style/nav.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+            <!-- Logo bên trái -->
+            <div class="logo">
+                <img alt="Company Logo" src="/public/assets/image/logo.jpg" width="60px" height="60px"/>
+            </div>
+    
+            <!-- Nút toggle cho mobile -->
+            <button class="navbar-toggler d-lg-none" type="button" aria-label="Toggle navigation" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon">
+                    <img src="/public/assets/icons/SVG/8666802_menu_navigation_icon.svg" alt="">
+                </span>
+            </button>
+    
+            <!-- Navbar chính giữa -->
+            <nav class="navbar collapse" id="navbarNav">
+                <div class="navbar-links">
+                    <a href="/public/info/home/index.html">Trang chủ</a>
+                    <a href="/productshop/shopproduct.html">Cửa hàng</a>
+                    <a href="/productshop/sick.html">Tra cứu bệnh</a>
+                    <a href="/man/html/index_m.html" class="active">Quản lý</a>
+                </div>
+            </nav>
+    
+            <!-- Sign-in bên phải -->
+            <div class="user">
+                <a class="user-icon" href="/formauth/profile.html">
+                    <img src="/public/assets/icons/SVG/9024006_user_circle_fill_icon.svg" alt="">
+                </a>
+                <div class="navbar-signin">
+                    <a class="sign-in" href="/formauth/index.html">Sign in</a>
+                </div>
+            </div>
+        </div>
+    </header>  
+
+    <div class="navbar-mobile" id="navbarNavMobile">
+        <div class="navbar-links">
+            <a href="/public/info/home/index.html">Trang chủ</a>
+            <a href="/productshop/shopproduct.html">Cửa hàng</a>
+            <a href="/productshop/sick.html">Tra cứu bệnh</a>
+            <a href="/man/html/index_m.html" class="active">Quản lý</a>
+        </div>
+    </div>
+
+    <main> 
+        <section class="overlay-add" id="overlay-add">
+            <h2>Thêm thuốc</h2>
+            <div class="grid-container">
+                <form id="formChange">
+                    <div class="form-medicine">
+                        <label for="medicine-name">Tên thuốc (Quan trọng):</label><br>
+                        <input type="text" id="medicine-name" name="medicine-name"><br><br>
+        
+                        <label for="generic-name">Tên chung (Tuỳ chọn):</label><br>
+                        <input type="text" id="generic-name" name="generic-name"><br><br>
+            
+                        <label for="price">Giá (Quan trọng):</label><br>
+                        <input type="number" id="price" name="price"><br><br>
+            
+                        <label for="manufacturing-date">Ngày sản xuất (Tuỳ chọn):</label><br>
+                        <input type="date" id="manufacturing-date" name="manufacturing-date"><br><br>
+            
+                        <label for="">Ngày hết hạn (Quan trọng):</label><br>
+                        <input type="date" id="expiry-date" name="expiry-date"><br><br>
+            
+                        <label for="">Số lượng hàng tồn kho (Quan trọng):</label><br>
+                        <input type="number" id="stock-quantity" name="stock-quantity"><br><br>
+            
+                        <label for="">Vị trí trong cửa hàng (Tuỳ chọn):</label><br>
+                        <input type="text" id="location-in-store" name="location-in-store"><br><br>
+            
+                        <label for="">Ghi chú bổ sung (Tuỳ chọn):</label><br>
+                        <input type="text" id="additional-notes" name="additional-notes"><br><br>
+            
+                        <div class="requires-prescription">
+                            <label for="requires-prescription">Yêu cầu đơn thuốc (Quan trọng):</label><br>
+                            <select id="requires-prescription" name="requires-prescription">
+                                <option value="yes">Có</option>
+                                <option value="no">Không</option>
+                            </select>
+                        </div><br>
+            
+                        <div class="type-of-medicine">
+                            <label for="type-med">Loại thuốc (Quan trọng):</label><br>
+                            <select id="type-med" name="type-med">
+                                <option value="tablets">Viên nén</option>
+                                <option value="capsules">Viên nang</option>
+                                <option value="syrups">Siro</option>
+                                <option value="injections">Thuốc tiêm</option>
+                                <option value="creams/ointments">Kem/Bôi</option>
+                                <option value="powders">Bột</option>
+                                <option value="inhalers">Ống hít</option>
+                                <option value="suppositories">Viên đặt</option>
+                                <option value="patches">Miếng dán</option>
+                                <option value="others">Khác</option>
+                            </select>
+                        </div><br>
+            
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+    
+                <div class="picture-of-medicine">
+                    <button type="button" onclick="document.getElementById('fileInput').click();">
+                        <i class="fa-regular fa-image"></i>
+                    </button>
+                    <input type="file" id="fileInput" accept="image/*" style="display:none;" onchange="handleFileUpload(event)">
+                    <img id="imagePreview" src="" alt="Image Preview" style="display:none;">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="/man/js/script_a.js"></script>
+</body>
+</html>

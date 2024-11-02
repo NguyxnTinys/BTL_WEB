@@ -1,0 +1,390 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Inter', sans-serif;
+}
+
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--second-bg-color); /* Đổi nền nếu muốn */
+    margin: 0;
+}
+
+
+:root {
+    --bg-color: rgb(150, 150, 150);
+    --second-bg-color: rgb(247, 247, 247);
+    --text-color: rgb(0, 0, 0);
+    --text-second-cl: rgb(255, 255, 255);
+    --primary-color: rgb(102, 189, 255);
+    --secondary-color: rgb(20, 181, 255);
+    --accent-color: rgb(229, 250, 255);
+    --text-headings: "Nunito", sans-serif;
+    --text-body: 'Inter', sans-serif;
+}
+
+
+.wrapper{
+    position: relative;
+    width: 440px;
+    height: 100%;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: aliceblue;
+    overflow: hidden;
+}
+
+.wrapper .form-box{
+    width: 100%;
+    padding: 40px;
+}
+
+.wrapper .icon-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: var(--btn-color);
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+
+
+.form-box h2{
+    font-size: 2em;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #162938;
+    margin: 30px 0;
+}
+
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    margin-top: 5px;
+    color: var(--text-color);
+    pointer-events: none;
+    font-weight: 500;
+    transition: .5s;
+}
+
+
+.remember-forgot label{
+    display: flex;
+}
+
+.remember-forgot label p {
+    font-size: 1em;
+    color: var(--text-color);
+    font-weight: 500;
+
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top: -5px;
+}
+
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 1em;
+    color: var(--text-color);
+    font-weight: 500;
+    padding: 0 35px 0 5px;
+}
+
+.input-box .icon{
+    position: absolute;
+    right: 8px;
+    font-size: 1.2rem;
+    line-height: 57px;
+}
+.remember-forgot{
+    font-size: 0.9em;
+    color: var(--text-color);
+    font-weight: 500;
+    margin: -10px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.remember-forgot a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.remember-forgot input{
+    margin-right: 3px;
+    accent-color: var(--text-color);
+    
+}
+.remember-forgot label{
+    display: inline-flex;
+    align-items: center;
+}
+
+.login-with{
+    display: flex;
+    align-items: center;
+    margin-top: 14px;
+}
+
+.login-with__boder{
+    width: 35%;
+    border: 1px solid var(--text-color);
+}
+
+.login-with-logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-with p {
+    font-size: 0.9em;
+    color: var(--text-color);
+    font-weight: 500;
+    text-align: center;
+    padding: 0 13px;
+}
+
+.login-with-logo{
+    margin-top: 13px;
+}
+
+.login-icon img{
+    height: 25px;
+}
+.login-icon__facebook{
+    margin-right: 4px;
+}
+
+.login-icon__google{
+    margin-left: 4px;
+}
+
+
+.login-icon a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    justify-content: center;
+    font-weight: 500;
+    width: 175px;
+    height: 40px;
+    border-radius: 7px;
+    border: 1px solid #ccc;
+}
+
+.login-icon a p{
+    font-size: .9em;
+    color: var(--text-color);
+    margin-left: 7px;
+}
+
+.remember-forgot a:hover{
+    text-decoration: underline;
+}
+
+.btn{
+    width: 100%;
+    height: 45px;
+    background: #724ae8;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+}
+
+.login-register{
+    font-size: 0.9em;
+    color: var(--text-color);
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+}
+
+.login-register p a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+
+.login-register p a:hover{
+    text-decoration: underline;
+}
+
+.chatbox img{
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+.chatbot{
+    position: fixed;
+    right: 20px;
+    bottom: 100px;
+    width: 330px;
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1),
+                0 32px 64px -48px rgba(0, 0, 0, 0.5);
+
+}
+.chatbot .icon-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 1.4em;
+}
+
+.chatbot header{
+    background-color: #724ae8;
+    text-align: center;
+    padding: 16px 0;
+
+}
+
+.chatbot header h2{
+    color: #fff;
+    font-size: 1em;
+}
+
+.chatbot .chatbox{
+    height: 350px;
+    overflow-y: auto;
+    padding: 15px 20px 70px;
+}
+.chatbox .incoming span{
+    align-self: flex-end;
+    margin: 0 10px 0 0;
+
+}
+
+.chatbox .outgoing{
+    margin: 20px 0;
+    justify-content: flex-end;
+}
+
+.chatbox .chat{
+    display: flex;
+}
+
+
+.chatbox .chat p {
+    color: #fff;
+    padding: 12px 16px;
+    max-width: 75%;
+    border-radius: 10px 10px 0 10px;
+    background-color: #724ae8;
+    font-size: 0.8em;
+}
+
+.chatbox .incoming p{
+    color: #000;
+    background-color: #f2f2f2;
+    border-radius: 10px 10px 10px 0;
+}
+
+.chatbot .chat-input{
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-top: 1px solid #ccc ;
+    background-color: #fff;
+    padding: 5px 15px;
+}
+
+
+.chatbot .chat-input textarea{
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    outline: none;
+    font-size: 0.8em;
+    width: 100%;
+    height: 30px;
+    padding: 7px;
+    resize: none;
+}
+
+.chat-input span {
+    margin-right: 5px;
+    font-size: 1.25em;
+    cursor: pointer;
+}
+
+.chatbot-toggler{
+    position: fixed;
+    right: 40px;
+    bottom: 35px;
+    width: 50px;
+    height: 50px;
+    background-color: #724ae8;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.chatbot-toggler span{
+    font-size: 2em;
+    color: #fff;
+    margin-top: 5px;
+}

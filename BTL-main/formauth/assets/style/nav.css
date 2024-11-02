@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Inter', sans-serif;
+}
+
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+:root {
+    --bg-color: rgb(150, 150, 150);
+    --second-bg-color: rgb(247, 247, 247);
+    --text-color: rgb(0, 0, 0);
+    --text-second-cl: rgb(255, 255, 255);
+    --primary-color: rgb(102, 189, 255);
+    --secondary-color: rgb(20, 181, 255);
+    --accent-color: rgb(229, 250, 255);
+    --text-headings: "Nunito", sans-serif;
+    --text-body: 'Inter', sans-serif;
+}
+
+.header {
+    font-family: var(--text-headings);
+    background-color: rgb(102, 189, 255, 0.3);
+    color: var(--text-second-cl);
+    font-weight: 800;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    justify-content: space-between;
+    backdrop-filter: blur(10px);
+    padding: 0 30px;
+    align-items: center;
+    box-shadow: 0 0 20px rgb(0, 0, 0, 0.5);
+    z-index: 200;
+}
+
+.container-fluid {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    /* margin-right: 10px; */
+}
+
+.navbar {
+    flex-grow: 1;
+    height: 60px;
+    display: flex;
+    padding: 0 !important;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+.navbar-mobile {
+    position: absolute; /* Đặt navbar ở vị trí tuyệt đối */
+    top: 100px; /* Cách header một khoảng bằng chiều cao của header */
+    right: 10px; /* Đặt navbar ở góc trên bên phải */
+    width: 300px;
+    display: none; /* Ẩn navbar mặc định */
+    flex-direction: column; /* Đặt các link trong cột */
+    gap: 15px; /* Khoảng cách giữa các link */
+    background-color: rgb(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Đổ bóng cho navbar */
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px; /* Thêm khoảng đệm */
+}
+
+.navbar-mobile.show {
+    display: flex; /* Hiển thị navbar khi class show được thêm */
+    z-index: 200; /* Đảm bảo navbar hiển thị trên các phần tử khác */
+}
+/* Căn chỉnh các link trong navbar sang phải */
+.navbar-links {
+    display: flex;
+    margin: 0 auto;
+    gap: 7px;
+}
+
+    .navbar-links a::before {
+        border-radius: 0px;
+    }
+
+    .navbar-links a {
+        color: var(--text-color);
+        font-size: 1rem !important;
+        height: 100%;
+        font-weight: 500 !important;
+        border-radius: 15px;
+        text-decoration: none !important;
+        padding: 10px;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .navbar-links a.active,
+    .navbar-links a:hover {
+        background-color: rgb(88, 182, 253, 0.4) !important;
+        color: #000;
+        text-shadow: 0 0 10px var(--accent-color) !important;
+        box-shadow: 0 0 10px rgb(0, 0, 0, 0.3);
+        transition: background-color 1.3s ease-in-out, 
+                    border-radius 1.3s ease;
+    }
+
+.user {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    gap: 10px
+}
+
+.user a.user-icon {
+    width: 55px;
+    height: 55px;
+    color: var(--text-color);
+    /* background-color: red; */
+}
+
+.navbar-signin {
+    right: 0;
+}
+
+.navbar-signin .sign-in {
+    background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+    padding: 12px 15px;
+    border-radius: 25px;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    font-size: 16px;
+}
+
+a.sign-in{
+    text-decoration: none;
+    align-content: center;
+    justify-content: center;
+}
+
+.navbar-signin .sign-in:hover {
+    background: linear-gradient(90deg, #2575fc 0%, #6a11cb 100%);
+}
+
+.navbar-toggler {
+    background-color: transparent;
+    border: none;
+    font-size: 40px;
+    align-items: center;
+    height: 100%;
+    display: flex;
+    position: absolute; /* Di chuyển ra ngoài luồng */
+    right: 20px;
+    top: -5px;
+}
+
+.navbar-toggler-icon {
+    display: flex; /* Căn giữa icon */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+}
+
+.navbar-toggler-icon img{
+    width: 35px;
+    height: 35px;
+    background-position: center;
+    align-self: center;
+}
+
+/* Mobile view */
+@media (max-width: 767px) {
+    .navbar {
+        display: none !important;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .model-title {
+        margin-top: 30px;
+    }
+
+    .model-title h2{
+        font-size: 2rem;
+    }
+
+    .navbar-links {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    
+    /* Chuyển sang dạng cột cho các link */
+    .navbar-links {
+        width: 100%;
+        display: flex; /* Sử dụng flexbox */
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; /* Căn giữa theo chiều dọc */
+    }
+
+    .navbar-links a {
+        text-align: center; /* Căn giữa nội dung bên trong thẻ <a> */
+        width: 100%; /* Đảm bảo thẻ <a> chiếm đủ chiều ngang của container */
+        padding: 10px 0;
+    }
+
+    .user {
+        margin-right: 7%;
+    }
+}
+/* Desktop view */
+@media (min-width: 768px) {
+    .navbar {
+        display: flex !important;
+    }
+
+    .navbar-toggler {
+        display: none; /* Ẩn nút khi trên desktop */
+    }
+
+    .sign-in {
+        margin-left: auto;
+    }
+
+    .navbar-mobile {
+        display: none !important;
+    }
+}

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vicks Inhaler 0.5 ml</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+
+    <script>
+        const images = [
+                        'images/vick-inhaler-1.jpg',
+                        'images/vick-inhaler-2.jpg',
+                        'images/vick-inhaler-3.jpg'
+                        ];
+    </script>
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <div class="content-section">
+            <div class="image-block col-4">
+                <div class="product-image">
+                    <img src="images/vick-inhaler-1.jpg" alt="Vicks Inhaler 0.5 ml">
+                </div>
+                <div class="dots-container">
+                    <span class="dot" onclick="changeImage(0)"></span>
+                    <span class="dot" onclick="changeImage(1)"></span>
+                    <span class="dot" onclick="changeImage(2)"></span>
+                </div>
+            
+                <div class="thumbnails">
+                    <img src="images/vick-inhaler-1.jpg" alt="Thumbnail 1" class="thumbnail" onclick="changeImage(0)">
+                    <img src="images/vick-inhaler-2.jpg" alt="Thumbnail 2" class="thumbnail" onclick="changeImage(1)">
+                    <img src="images/vick-inhaler-3.jpg" alt="Thumbnail 3" class="thumbnail" onclick="changeImage(2)">
+                </div>
+            </div>
+    
+            <div class="info-block col-8">
+                <div class="section-one">
+                    <div class="product-name">
+                        <h1>Vicks Inhaler 0.5 ml</h1>   
+                    </div>
+                    
+                    <div class="important-info">
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span class="rating-number">2.9</span>
+                            <span class="review-count">(1112)</span>
+                        </div>
+                        <div class="availability">
+                            <p class="stock-text">In Stock</p>
+                            <i class="fa fa-check-circle"></i>
+                        </div>
+                    </div>
+                    <div class="price">£67.00</div>                                
+                </div>
+
+                <div class="section-two">
+                    <div class="info-container">
+                        <div class="info-row">
+                            <span class="info-label">Generic Name</span>
+                            <span class="info-value">Levmetamfetamine</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Manufacturing Date</span>
+                            <span class="info-value">09/01/2023</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Expiry date</span>
+                            <span class="info-value">09/01/2024</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Location in store</span>
+                            <span class="info-value">A4-R5-S2</span>
+                        </div>
+                        
+                        <div class="info-row">
+                            <span class="info-label">Quantity</span>
+                            <span class="info-value">19 units</span>
+                        </div>
+
+                        <div class="info-row">
+                            <span class="info-label">Requires Prescription?</span>
+                            <span class="info-value">No</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Type of Medicine</span>
+                            <span class="info-value">Inhalers</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="more-info">More Information</div>
+
+        <div class="tab-container">
+            <div class="tab-names">
+                <div class="tab-link tab-1 active" onclick="openTab(event, 'Tab1')">
+                    <h2>Description</h2>
+                </div>
+                <div  class="tab-link tab-2" onclick="openTab(event, 'Tab2')">
+                    <h2>Ingredients</h2>
+                </div>
+                <div class="tab-link tab-3" onclick="openTab(event, 'Tab3')">
+                    <h2>Benefits</h2>
+                </div>
+                <div class="tab-link tab-4" onclick="openTab(event, 'Tab4')">
+                    <h2>Usage</h2>
+                </div>
+                <div class="tab-link tab-5" onclick="openTab(event, 'Tab5')">
+                    <h2>Precaution</h2>
+                </div>
+            </div>
+            <div class="tab-content">
+                <div id="Tab1" class="tab-content-item active">
+                    <p>The Vicks Inhaler is a handy and efficient solution for individuals dealing with nasal congestion. This inhaler can be easily slipped into pockets for immediate use when needed. The Vicks Inhale process offers swift relief from the discomfort of stuffy noses, typically stemming from colds. Upon inhaling, one could experience temporary relief from nasal congestion, making this a practical choice during the cold season.</p>
+                    <p>Not only is the Vicks Inhaler fast in providing relief, but it's also an economical choice. Its 0.5 ml contains a blend of multiple ingredients, all working harmoniously to soothe and provide comfort from the struggles of nasal congestion. If you're pondering over the Vicks Inhaler price, you'd be pleased to know that its efficiency and portability make it a cost-effective option in the market.</p>
+                </div>
+                <div id="Tab2" class="tab-content-item">
+                    <ul>
+                        <li>Menthol 125 mg</li>
+                        <li>Camphor 50 mg</li>
+                        <li>Siberian Pine Needle Oil 10 mg</li>
+                        <li>Methyl salicylate</li>
+                    </ul>                    
+                </div>
+                <div id="Tab3" class="tab-content-item">
+                    <ul>
+                        <li>Relief: Provides immediate relief from nasal congestion, thanks to its powerful vapor formula that swiftly opens up nasal passages.</li>
+                        <li>Design: Designed for on-the-go use, this pocket-sized inhaler ensures you have quick and convenient relief wherever and whenever nasal congestion strikes.</li>
+                        <li>Benefits: Enjoy the benefits of non-medicated relief, suitable for all ages. It offers a natural and effective solution for congestion without the use of medications.</li>
+                        <li>Freshness: Each inhaler is sealed to preserve the freshness of Vicks vapors, ensuring a long-lasting and refreshing experience for clear and easy breathing.</li>
+                    </ul>
+                                                                
+                </div>
+                <div id="Tab4" class="tab-content-item">
+                    <ul>
+                        <li>Remove the cap from the Vicks Inhaler 0.5 ml, ensuring the inhaler is unsealed and ready for use.</li>
+                        <li>Gently bring the open end of the inhaler close to one nostril, avoiding direct contact with the nostril to ensure hygiene.</li>
+                        <li>Inhale deeply through the nostril, allowing the powerful Vicks vapors to penetrate and provide quick relief to nasal congestion.</li>
+                        <li>If needed, repeat the process for the other nostril, inhaling deeply for optimal effectiveness.</li>
+                        <li>After use, reseal the inhaler with the cap to preserve its freshness and potency for future use.</li>
+                    </ul>
+                    
+                </div>
+                <div id="Tab5" class="tab-content-item">
+                    <ul>
+                        <li>The Vicks Inhaler is generally safe to use for adults and children above six years of age.</li>
+                        <li>Do not use more than necessary; excessive use may lead to nasal irritation.</li>
+                        <li>If symptoms persist, seek medical advice.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-details">
+            <div class="visible-content">
+                <div class="info-item">
+                    <div class="field-label">Item Weight</div>
+                    <div class="field-value">50 g</div>
+                </div>
+                <div class="info-item">
+                    <div class="field-label">Country Of Origin</div>
+                    <div class="field-value">India</div>
+                </div>
+            </div>
+            <div class="hidden-content" style="display: none;">
+                <div class="info-item">
+                    <div class="field-label">HSN Code</div>
+                    <div class="field-value">30049011</div>
+                </div>
+                <div class="info-item">
+                    <div class="field-label">Customer care no</div>
+                    <div class="field-value">1800-202-1364, 91-22-2826-6000</div>
+                </div>
+                <div class="info-item">
+                    <div class="field-label">Customer care email id</div>
+                    <div class="field-value">intouch.im@pg.com</div>
+                </div>
+                <div class="info-item">
+                    <div class="field-label">Name of Manufacturer</div>
+                    <div class="field-value">Procter & Gamble</div>
+                </div>
+                <div class="info-item">
+                    <div class="field-label">Address of Manufacturer</div>
+                    <div class="field-value">P&G plaza, Cardinal Gracias Road, Chakala, Andheri (E), Mumbai</div>
+                </div>
+                <div class="info-item">
+                    <div class="field-label">Contact of Manufacturer</div>
+                    <div class="field-value">+89 281 75 835</div>
+                </div>
+            </div>
+            
+            <div class="show-more">
+                <button>
+                    <span onclick="showmorelessManufacturer()" id="moreless">
+                        Show more <img src="images/chevron_down_pink.svg">
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

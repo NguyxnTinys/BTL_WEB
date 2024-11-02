@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/style/base.css">
+    <link rel="stylesheet" href="./assets/style/main.css">
+    <link rel="stylesheet" href="./assets/style/grid.css">
+    <title>Medical Management </title>
+</head>
+<body>
+    <div class="wrapper">
+        <span class="icon-close">
+           <a href="/public/info/home/index.html"> <i class='bx bx-x'></i></a>
+        </span>
+        <div class="form-box active" id="login">
+            <h2>Login</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon"><i class='bx bxs-user'></i></span>
+                    <input id="username" type="text" required>
+                    <label>Username</label>
+                    <span class="message"></span>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><i class='bx bxs-lock-alt'></i></span>
+                    <input id="password" type="password" required>
+                    <label>Password</label>
+                    <span class="message"></span>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox"> 
+                        <p>Remember me</p>
+                    </label>
+                    <a href="#">Forgot Password?</a>
+                </div>
+                <button class="btn" type="submit">Login</button>
+                <div class="login-with">
+                    <div class="login-with__boder"></div>
+                    <p>Or login with</p>
+                    <div class="login-with__boder"></div>
+                </div>
+                <div class="login-with-logo">
+                    <span class="login-icon">
+                        <a class="login-icon__facebook" href="#">
+                            <img class="login-icon__facebook-img" src="./assets/img/faceboook.svg" alt="">
+                            <p>Faceboook</p>
+                        </a>
+                    </span>
+                    <span class="login-icon">
+                        <a class="login-icon__google" href="#">
+                            <img class="login-icon__google-img" src="./assets/img/google.png" alt="">
+                            <p>Google</p>
+                        </a>
+                    </span>
+                </div>
+                <div class="login-register">
+                    <p>Don't have an account? <a href="#" id="registerLink" class="register-link">Register</a></p>
+                </div>
+            </form>
+        </div>
+
+        <div class="form-box" id="register">
+            <h2>Sign in</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon"><i class='bx bxs-user'></i></span>
+                    <input id="username" type="text" required>
+                    <label>Username</label>
+                    <span class="message"></span>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><i class='bx bxs-lock-alt'></i></span>
+                    <input id="password" type="password" required>
+                    <label>Password</label>
+                    <span class="message"></span>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><i class='bx bxs-lock-alt'></i></span>
+                    <input id="confirm_password" type="password" required>
+                    <label>Confirm Password</label>
+                    <span class="message"></span>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox"> 
+                        <p>I agree to the terms & conditions</p>
+                    </label>
+                </div>
+                <button class="btn" type="submit">Sign in</button>
+                <div class="login-with">
+                    <div class="login-with__boder"></div>
+                    <p>Or sign with</p>
+                    <div class="login-with__boder"></div>
+                </div>
+                <div class="login-with-logo">
+                    <span class="login-icon">
+                        <a class="login-icon__facebook" href="#">
+                            <img class="login-icon__facebook-img" src="./assets/img/faceboook.svg" alt="">
+                            <p>Faceboook</p>
+                        </a>
+                    </span>
+                    <span class="login-icon">
+                        <a class="login-icon__google" href="#">
+                            <img class="login-icon__google-img" src="./assets/img/google.png" alt="">
+                            <p>Google</p>
+                        </a>
+                    </span>
+                </div>
+                <div class="login-register">
+                    <p>Already have an account? <a href="#" id="loginLink" class="register-link">Log in Now</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+  
+    
+
+    <script src="./assets/js/validate.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script>
+       
+
+
+        Validator({
+            form: '#login',
+            rules: [
+                Validator.isRequired('#username'),
+                Validator.isPassword('#password', 8)
+            ]
+        });
+        
+        Validator({
+            form: '#register',
+            rules: [
+                Validator.isRequired('#username'),
+                Validator.isPassword('#password', 8),
+                Validator.isConfirmed('#confirm_password', function () {
+                    return document.querySelector('#register #password').value;
+                }, 'Passwords do not match')
+            ]
+        });
+    </script>
+</body>
+</html>

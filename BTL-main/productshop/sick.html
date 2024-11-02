@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Management </title>
+    <link rel="stylesheet" href="/productshop/main.css">
+    <link rel="stylesheet" href="/productshop/base.css">
+    <link rel="stylesheet" href="/formauth/assets/style/nav.css">
+    <link rel="stylesheet" href="/formauth/assets/style/grid.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./font/fontawesome-free-6.6.0-web/css/all.min.css">
+    <link rel="icon" href="./assets/img/Shopee-logo.jpg">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  
+    <header class="header">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+            <!-- Logo bên trái -->
+            <div class="logo">
+                <img alt="Company Logo" src="/public/assets/image/logo.jpg" width="60px" height="60px"/>
+            </div>
+    
+            <!-- Nút toggle cho mobile -->
+            <button class="navbar-toggler d-lg-none" type="button" aria-label="Toggle navigation" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon">
+                    <img src="/public/assets/icons/SVG/8666802_menu_navigation_icon.svg" alt="">
+                </span>
+            </button>
+    
+            <!-- Navbar chính giữa -->
+            <nav class="navbar collapse" id="navbarNav">
+                <div class="navbar-links">
+                    <a href="/public/info/home/index.html">Trang chủ</a>
+                    <a href="/productshop/shopproduct.html">Cửa hàng</a>
+                    <a href="/productshop/sick.html" class="active">Tra cứu bệnh</a>
+                    <a href="/man/html/index_m.html">Quản lý</a>
+                </div>
+            </nav>
+    
+            <!-- Sign-in bên phải -->
+            <div class="user">
+                <a class="user-icon" href="/formauth/profile.html">
+                    <img src="/public/assets/icons/SVG/9024006_user_circle_fill_icon.svg" alt="">
+                </a>
+                <div class="navbar-signin">
+                    <a class="sign-in" href="/formauth/index.html">Sign in</a>
+                </div>
+            </div>
+        </div>
+    </header> 
+
+    <div class="navbar-mobile" id="navbarNavMobile">
+        <div class="navbar-links">
+            <a href="/public/info/home/index.html" class="active">Trang chủ</a>
+            <a href="/productshop/shopproduct.html">Cửa hàng</a>
+            <a href="/productshop/sick.html">Tra cứu bệnh</a>
+            <a href="/man/html/index_m.html">Quản lý</a>
+        </div>
+    </div>  
+
+
+    <div class="app_container">
+        <div class="common-disease">
+            <div class="grid wide">  
+                <div class="app_container__heading">
+                    <h2>Những điều cần biết về bệnh</h2>
+                    <div class="search_form">
+                        <span class="search-bar-icon">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </span>
+                        <input type="text" placeholder="Tìm kiếm thông tin về bệnh...">
+                    </div>
+                </div>
+                <div class="grid__row">
+                    <div class="col wide c-4 m-3 l-2">
+                        <div class="disease-list-img">
+                            <img src="./img/benh-soi-la-gi.avif" alt="">
+                            <p>Bệnh sởi</p>
+                        </div>
+                    </div>
+                    <div class="col wide c-4 m-3 l-2">
+                        <div class="disease-list-img">
+                            <img src="/productshop/img/benh-cum-mua.avif" alt="">
+                            <p>Bệnh cúm</p>
+                        </div>
+                    </div>
+                    <div class="col wide c-4 m-3 l-2">
+                        <div class="disease-list-img">
+                            <img src="/productshop/img/bach-hau-1.avif" alt="">
+                            <p>Bạch hầu</p>
+                        </div>
+                    </div>
+                    <div class="col wide c-4 m-3 l-2">
+                        <div class="disease-list-img">
+                            <img src="/productshop/img/6O8D9s5k-benh-tay-chan-mieng.avif" alt="">
+                            <p>Tay chân miệng</p>
+                        </div>
+                    </div>
+                    <div class="col wide c-4 m-3 l-2">
+                        <div class="disease-list-img">
+                            <img src="/productshop/img/luu-y-khi-dau-mat-do-1-1.avif" alt="">
+                            <p>Đau mắt đỏ</p>
+                        </div>
+                    </div>
+                    <div class="col wide c-4 m-3 l-2">
+                        <div class="disease-list-img">
+                            <img src="/productshop/img/C5beVEzq-Dai-thao-duong-thai-ky.avif" alt="">
+                            <p>Tiểu đường thai kỳ</p>
+                        </div>
+                    </div>
+                    <div class="col wide c-4 m-3 l-2">
+                        <div class="disease-list-img">
+                            <img src="/productshop/img/jEVc78M2-tieu-duong-2.avif" alt="">
+                            <p>Tiểu đường tuýp 1</p>
+                        </div>
+                    </div>
+                    <div class="col wide c-4 m-3 l-2">
+                        <div class="disease-list-img">
+                            <img src="/productshop/img/tieu-duong-tuyp-2.avif" alt="">
+                            <p>Tiểu đường tuýp 2</p>
+                        </div>
+                    </div>
+                    <div class="col wide c-4 m-3 l-2">
+                        <div class="disease-list-img">
+                            <img src="/productshop/img/tieu-chay-1.avif" alt="">
+                            <p>Tiêu chảy</p>
+                        </div>
+                    </div>
+                    <div class="col wide c-4 m-3 l-2">
+                        <div class="disease-list-img">
+                            <img src="/productshop/img/hesuyen.avif" alt="">
+                            <p>Hen Suyễn</p>
+                        </div>
+                    </div>
+                    <div class="col wide c-4 m-3 l-2">
+                        <div class="disease-list-img">
+                            <img src="/productshop/img/sot-sieu-vi-1.avif" alt="">
+                            <p>Sốt siêu vi</p>
+                        </div>
+                    </div>
+                    <div class="col wide c-4 m-3 l-2">
+                        <div class="disease-list-img">
+                            <img src="/productshop/img/gioi-leo-2.avif" alt="">
+                            <p>Giờ leo</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="see-more__product">
+                    <button>Xem thêm</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="disease-object">
+            <div class="grid wide">
+                <h2>Bệnh theo đối tượng</h2>
+                <div class="grid__row">
+                    <div class="grid__column-3 c-12 l-6">
+                        <div class="disease-object__container">
+                            <img src="/productshop/img/Men-300x300-1.avif" alt="">
+                            <ul class="disease-list-link">
+                                <h3>Bệnh Nam giới</h3>
+                                <li>
+                                    <a href="">Rối loạn cương dương</a>
+                                </li>
+                                <li>
+                                    <a href="">Xuất tinh sớm</a>
+                                </li>
+                                <li>
+                                    <a href="">Viêm tuyến tiền liệt</a>
+                                </li>
+                                <li>
+                                    <a href="">Tăng huyết áp</a>
+                                </li>
+                                <li>
+                                    <a href="">Suy giảm sức khỏe</a>
+                                </li>
+                                <li>
+                                    <a href="">Phì đại tuyến tiền liệt</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="grid__column-3 c-12 l-6">
+                        <div class="disease-object__container">
+                            <img src="/productshop/img/NguoiCaoTuoi.avif" alt="">
+                            <ul class="disease-list-link">
+                                <h3>Bệnh người cao tuổi</h3>
+                                <li>
+                                    <a href="">Bệnh tim mạch</a>
+                                </li>
+                                <li>
+                                    <a href="">Tiểu đường</a>
+                                </li>
+                                <li>
+                                    <a href="">Thoái hóa xương khớp</a>
+                                </li>
+                                <li>
+                                    <a href="">Suy giảm trí nhớ và bệnh Alzheimer</a>
+                                </li>
+                                <li>
+                                    <a href="">Bệnh về mắt</a>
+                                </li>
+                                <li>
+                                    <a href="">Táo bón và rối loạn tiêu hóa</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="grid__column-3 c-12 l-6">
+                        <div class="disease-object__container">
+                            <img src="/productshop/img/Women.avif" alt="">
+                            <ul class="disease-list-link">
+                                <h3>Bệnh cho nữ giới</h3>
+                                <li>
+                                    <a href="">Hội chứng tiền kinh nguyệt </a>
+                                </li>
+                                <li>
+                                    <a href="">Rối loạn kinh nguyệt</a>
+                                </li>
+                                <li>
+                                    <a href="">Viêm nhiễm phụ khoa</a>
+                                </li>
+                                <li>
+                                    <a href="">Lạc nội mạc tử cung</a>
+                                </li>
+                                <li>
+                                    <a href="">U xơ tử cung</a>
+                                </li>
+                                <li>
+                                    <a href="">Ung thư vú</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="grid__column-3 c-12 l-6">
+                        <div class="disease-object__container">
+                            <img src="/productshop/img/TreEm.avif" alt="">
+                            <ul class="disease-list-link">
+                                <h3>Bệnh cho trẻ em</h3>
+                                <li>
+                                    <a href="">Cảm lạnh và cảm cúm</a>
+                                </li>
+                                <li>
+                                    <a href="">Viêm họng</a>
+                                </li>
+                                <li>
+                                    <a href="">Bệnh tay chân miệng</a>
+                                </li>
+                                <li>
+                                    <a href="">Viêm phế quản và viêm phổi</a>
+                                </li>
+                                <li>
+                                    <a href="">Sởi</a>
+                                </li>
+                                <li>
+                                    <a href="">Sốt xuất huyết</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="grid__column-3 c-12 l-6">
+                        <div class="disease-object__container">
+                            <img src="/productshop/img/TuoiDayThi.avif" alt="">
+                            <ul class="disease-list-link">
+                                <h3>Bệnh tuổi dậy thì</h3>
+                                <li>
+                                    <a href="">Mụn trứng cá</a>
+                                </li>
+                                <li>
+                                    <a href="">Rối loạn kinh nguyệt </a>
+                                </li>
+                                <li>
+                                    <a href="">Bệnh phụ khoa</a>
+                                </li>
+                                <li>
+                                    <a href="">Bệnh về tâm lý </a>
+                                </li>
+                                <li>
+                                    <a href="">Tăng cân và béo phì</a>
+                                </li>
+                                <li>
+                                    <a href="">Thiếu máu do thiếu sắt</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="grid__column-3 c-12 l-6">
+                        <div class="disease-object__container">
+                            <img src="/productshop/img/MangThai.avif" alt="">
+                            <ul class="disease-list-link">
+                                <h3>Bệnh do phụ nữ mang thai</h3>
+                                <li>
+                                    <a href="">Nhiễm trùng đường tiểu</a>
+                                </li>
+                                <li>
+                                    <a href="">Thiếu máu</a>
+                                </li>
+                                <li>
+                                    <a href="">Đau lưng và đau vùng chậu</a>
+                                </li>
+                                <li>
+                                    <a href="">Suy giãn tĩnh mạch</a>
+                                </li>
+                                <li>
+                                    <a href="">Bệnh trầm cảm hoặc lo âu khi mang thai</a>
+                                </li>
+                                <li>
+                                    <a href="">Ốm nghén kéo dài </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="body-parts">
+            <div class="grid wide">
+                <h2>Bộ phận cơ thể</h2>
+                <div class="grid__row">
+                    <div class="col c-4 m-3 l-2">
+                        <div class="disease-list-img">
+                            <img src="./img/Head.webp" alt="">
+                            <p>Đầu</p>
+                        </div>
+                    </div>
+                    <div class="col c-4 m-3 l-2">
+                        <div class="disease-list-img">
+                            <img src="./img/Belly.webp" alt="">
+                            <p>Ngực</p>
+                        </div>
+                    </div>
+                    <div class="col c-4 m-3 l-2">
+                        <div class="disease-list-img">
+                            <img src="./img/Shoulder.webp" alt="">
+                            <p>Cổ vai gáy</p>
+                        </div>
+                    </div>
+                    <div class="col c-4 m-3 l-2">
+                        <div class="disease-list-img">
+                            <img src="./img/Hand-foot-new.webp" alt="">
+                            <p>Tứ chi</p>
+                        </div>
+                    </div>
+                    <div class="col c-4 m-3 l-2">
+                        <div class="disease-list-img">
+                            <img src="./img/XY-300x300-1.webp" alt="">
+                            <p>Sinh dục</p>
+                        </div>
+                    </div>
+                    <div class="col c-4 m-3 l-2">
+                        <div class="disease-list-img">
+                            <img src="./img/Ear-nose-lips.webp" alt="">
+                            <p>Bệnh sởi</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="common-disease">
+            <div class="grid wide">  
+                <div class="app_container__heading">
+                    <h2>Bệnh theo mùa</h2>
+                </div>
+                <div class="grid__row">
+                    <div class="grid__column-2">
+                        <div class="disease-list-img">
+                            <img src="./img/benh-soi-la-gi.avif" alt="">
+                            <p>Bệnh sởi</p>
+                        </div>
+                    </div>
+                    <div class="grid__column-2">
+                        <div class="disease-list-img">
+                            <img src="/productshop/img/benh-cum-mua.avif" alt="">
+                            <p>Bệnh cúm</p>
+                        </div>
+                    </div>
+                    <div class="grid__column-2">
+                        <div class="disease-list-img">
+                            <img src="/productshop/img/bach-hau-1.avif" alt="">
+                            <p>Bạch hầu</p>
+                        </div>
+                    </div>
+                    <div class="grid__column-2">
+                        <div class="disease-list-img">
+                            <img src="/productshop/img/6O8D9s5k-benh-tay-chan-mieng.avif" alt="">
+                            <p>Tay chân miệng</p>
+                        </div>
+                    </div>
+                    <div class="grid__column-2">
+                        <div class="disease-list-img">
+                            <img src="/productshop/img/luu-y-khi-dau-mat-do-1-1.avif" alt="">
+                            <p>Đau mắt đỏ</p>
+                        </div>
+                    </div>
+                    <div class="grid__column-2">
+                        <div class="disease-list-img">
+                            <img src="/productshop/img/C5beVEzq-Dai-thao-duong-thai-ky.avif" alt="">
+                            <p>Tiểu đường thai kỳ</p>
+                        </div>
+                    </div>
+                    <div class="grid__column-2">
+                        <div class="disease-list-img">
+                            <img src="/productshop/img/jEVc78M2-tieu-duong-2.avif" alt="">
+                            <p>Tiểu đường tuýp 1</p>
+                        </div>
+                    </div>
+                    <div class="grid__column-2">
+                        <div class="disease-list-img">
+                            <img src="/productshop/img/tieu-duong-tuyp-2.avif" alt="">
+                            <p>Tiểu đường tuýp 2</p>
+                        </div>
+                    </div>
+                    <div class="grid__column-2">
+                        <div class="disease-list-img">
+                            <img src="/productshop/img/tieu-chay-1.avif" alt="">
+                            <p>Tiêu chảy</p>
+                        </div>
+                    </div>
+                    <div class="grid__column-2">
+                        <div class="disease-list-img">
+                            <img src="/productshop/img/hesuyen.avif" alt="">
+                            <p>Hen Suyễn</p>
+                        </div>
+                    </div>
+                    <div class="grid__column-2">
+                        <div class="disease-list-img">
+                            <img src="/productshop/img/sot-sieu-vi-1.avif" alt="">
+                            <p>Sốt siêu vi</p>
+                        </div>
+                    </div>
+                    <div class="grid__column-2">
+                        <div class="disease-list-img">
+                            <img src="/productshop/img/gioi-leo-2.avif" alt="">
+                            <p>Giờ leo</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="see-more__product">
+                    <button>Xem thêm</button>
+                </div>
+            </div>
+        </div>
+        <div class="disease-specialty">
+            <div class="grid wide">  
+                <div class="app_container__heading">
+                    <h2>Nhóm bệnh chuyên khoa</h2>
+                </div>
+                <div class="grid__row">
+                    <div class="grid__column-2">
+                        <div class="disease-list-img">
+                            <img src="./img/Ung_thu_637f743959.webp" alt="">
+                            <p>Ung thư</p>
+                        </div>
+                    </div>
+                    <div class="grid__column-2">
+                        <div class="disease-list-img">
+                            <img src="/productshop/img/Tim_mach_f058f1eba6.webp" alt="">
+                            <p>Tim mạnh</p>
+                        </div>
+                    </div>
+                    <div class="grid__column-2">
+                        <div class="disease-list-img">
+                            <img src="/productshop/img/Co_Xuong_Khop_5ae32d7e8c.webp" alt="">
+                            <p>Xương khớp</p>
+                        </div>
+                    </div>
+                    <div class="grid__column-2">
+                        <div class="disease-list-img">
+                            <img src="/productshop/img/Mau_cfd65af040.webp" alt="">
+                            <p>Máu</p>
+                        </div>
+                    </div>
+                    <div class="grid__column-2">
+                        <div class="disease-list-img">
+                            <img src="/productshop/img/Than_kinh_Tinh_than_fix_7b3acc213f.webp" alt="">
+                            <p>Thần kinh - Tinh Thần</p>
+                        </div>
+                    </div>
+                    <div class="grid__column-2">
+                        <div class="disease-list-img">
+                            <img src="/productshop/img/Than_tiet_nieu_97376f0683.webp" alt="">
+                            <p>Thận - Tiết niệu</p>
+                        </div>
+                    </div>
+                    <div class="grid__column-2">
+                        <div class="disease-list-img">
+                            <img src="/productshop/img/jEVc78M2-tieu-duong-2.avif" alt="">
+                            <p>Tiểu đường tuýp 1</p>
+                        </div>
+                    </div>
+                    <div class="grid__column-2">
+                        <div class="disease-list-img">
+                            <img src="/productshop/img/Ho_hap_3703e82a74.webp" alt="">
+                            <p>Hô hấp</p>
+                        </div>
+                    </div>
+                    <div class="grid__column-2">
+                        <div class="disease-list-img">
+                            <img src="/productshop/img/tieu-chay-1.avif" alt="">
+                            <p>Tiêu hóa</p>
+                        </div>
+                    </div>
+                    <div class="grid__column-2">
+                        <div class="disease-list-img">
+                            <img src="/productshop/img/Suc_khoe_sinh_san_14716c7662.webp" alt="">
+                            <p>Sức khỏe sinh sản</p>
+                        </div>
+                    </div>
+                    <div class="grid__column-2">
+                        <div class="disease-list-img">
+                            <img src="/productshop/img/Suc_khoe_gioi_tinh_38600ad2ff.webp" alt="">
+                            <p>Sức khỏe giới tính</p>
+                        </div>
+                    </div>
+                    <div class="grid__column-2">
+                        <div class="disease-list-img">
+                            <img src="/productshop/img/Truyen_nhiem_87bd778b6d.webp" alt="">
+                            <p>Triềm nhiễm</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="see-more__product">
+                    <button>Xem thêm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+
+
+   
+    <footer class="footer">
+        <div class="footer-btm">
+            <div class="offline-store__container">
+                <img src="/public/assets/image/store-svgrepo-com.svg" alt="">
+                <div class="footer-content">
+                    <h3>10000+</h3>
+                    <p>Offline Stores</p>
+                </div>
+            </div>
+            <div class="offline-store__container">
+                <img src="/public/assets/image/location-pin-svgrepo-com.svg" alt="">
+                <div class="footer-content">
+                    <h3>40000+</h3>
+                    <p>Pincodes Served</p>
+                </div>
+            </div>
+            <div class="offline-store__container">
+                <img src="/public/assets/image/usercustomer.png" alt="">
+                <div class="footer-content">
+                    <h3>5M+ </h3>
+                    <p>Happy Customers</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-top">
+            <div class="footer-logo">
+                <img src="/public/assets/image/logohieuthuoc.png" alt="">
+            </div>
+            <div class="footer-txt">
+                <p>Netmeds.com is one of India's most trusted pharmacies, dispensing quality medicines at reasonable prices to over 9 million happy customers – PAN India.</p>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="row">
+                <div class="col grid__column-2-4">
+                    <div class="boxfooter">
+                        <h3>Company</h3>
+                        <ul class="boxfooter-list">
+                            <li>
+                                <a href="">About Netmeds</a>
+                            </li>
+                            <li>
+                                <a href="">Customers Speak</a>
+                            </li>
+                            <li>
+                                <a href="">In the News</a>
+                            </li>
+                            <li>
+                                <a href="">Career</a>
+                            </li>
+                            <li>
+                                <a href="">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col grid__column-2-4">
+                    <div class="boxfooter">
+                        <h3>Our policies</h3>
+                        <ul class="boxfooter-list">
+                            <li>
+                                <a href="">Terms and Conditions</a>
+                            </li>
+                            <li>
+                                <a href="">Privacy Policy</a>
+                            </li>
+                            <li>
+                                <a href="">Fees and Payments Policy</a>
+                            </li>
+                            <li>
+                                <a href="">Shipping and Delivery Policy</a>
+                            </li>
+                            <li>
+                                <a href="">Return, Refund and Cancellation Policy</a>
+                            </li>
+                            <li>
+                                <a href="">Editorial Policy</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col grid__column-2-4">
+                    <div class="boxfooter">
+                        <h3>Shopping</h3>
+                        <ul class="boxfooter-list">
+                            <li>
+                                <a href="">Browse by A-Z</a>
+                            </li>
+                            <li>
+                                <a href="">Browse by Manufacturers</a>
+                            </li>
+                            <li>
+                                <a href="">Health Articles</a>
+                            </li>
+                            <li>
+                                <a href="">Offers / Coupons</a>
+                            </li>
+                            <li>
+                                <a href="">FAQs</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col grid__column-2-4">
+                    <div class="boxfooter">
+                        <h3>Popular Categories</h3>
+                        <ul class="boxfooter-list">
+                            <li>
+                                <a href="">Fitness</a>
+                            </li>
+                            <li>
+                                <a href="">Devices</a>
+                            </li>
+                            <li>
+                                <a href="">Personal Care</a>
+                            </li>
+                            <li>
+                                <a href="">Ayurveda</a>
+                            </li>
+                            <li>
+                                <a href="">Treatments</a>
+                            </li>
+                            <li>
+                                <a href="">Sexual Wellness</a>
+                            </li>
+                            <li>
+                                <a href="">Surgicals</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="box-sub col grid__column-2-4">
+                    <div class="boxfooter">
+                        <h3>Subcribe To Our Newsletter</h3>
+                        <p>Get a free subscription to our health and fitness tip and stay tuned to our latest offers</p>
+                        <div class="box-input">
+                            <input type="text" placeholder="Enter your email address">
+                            <button><i class='bx bx-right-arrow-alt'></i></button>
+                        </div>
+                        <div class="box-sub__down-app">
+                            <a href="#">
+                                <img src="/public/assets/image/play_store.png" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="/public/assets/image/app_store.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box_pay">
+                <div class="boxfooter">
+                    <h3>Our Payment Partent</h3>
+                    <div class="our-partners">
+                        <img src="/public/assets/image/google-pay.svg" alt="">
+                        <img src="/public/assets/image/phonepe.svg" alt="">
+                        <img src="/public/assets/image/paytm.svg" alt="">
+                        <img src="/public/assets/image/simpl.svg" alt="">
+                        <img src="/public/assets/image/rupay.svg" alt="">
+                        <img src="/public/assets/image/visa.svg" alt="">
+                        <img src="/public/assets/image/mastercard.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="social-network">
+                <h3>My of socical</h3>
+                <div class="social-network-img">
+                    <span>
+                        <a href="">
+                            <img src="/public/assets/image/faceboook.svg" alt="">
+                        </a>
+                    </span>
+                    <span>
+                        <a href="">
+                            <img src="/public/assets/image/google.png" alt="">
+                        </a>
+                    </span>
+                    <span>
+                        <a href="">
+                            <img src="/public/assets/image/free-twitter-logo-icon-2429-thumb.png" alt="">
+                        </a>
+                    </span>
+                    <span>
+                        <a href="">
+                            <img src="/public/assets/image/Instagram_logo_2016.svg.webp" alt="">
+                        </a>
+                    </span>
+                </div>
+            </div>
+            <div class="copyblock">
+                <div class="copyblock-link">
+                    <a href="">Medicine</a>
+                </div>
+                <div class="copyblock-link">
+                    <a href="">Wellness</a>
+                </div>
+                <div class="copyblock-link">
+                    <a href="">Lab Tests</a>
+                </div>
+                <div class="copyblock-link">
+                    <a href="">Beauty</a>
+                </div>
+                <div class="copyblock-link">
+                    <a href="">Copyright© 2023. All Rights Reserved</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./main.js"></script>
+    <script src="/public/info/home/script.js"></script>
+</body>
+</html>

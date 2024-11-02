@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEOMOL I.V Infusion 100ml - Rapid Pain Relief</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+
+    <script>
+        const images = [
+                        'images/neomol-1.jpg',
+                        'images/neomol-2.jpg',
+                        'images/neomol-3.jpg'
+                        ];
+    </script>
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <div class="content-section">
+            <div class="image-block col-4">
+                <div class="product-image">
+                    <img src="images/neomol-1.jpg" alt="NEOMOL I.V Infusion 100ml">
+                </div>
+                <div class="dots-container">
+                    <span class="dot" onclick="changeImage(0)"></span>
+                    <span class="dot" onclick="changeImage(1)"></span>
+                    <span class="dot" onclick="changeImage(2)"></span>
+                </div>
+            
+                <div class="thumbnails">
+                    <img src="images/neomol-1.jpg" alt="Thumbnail 1" class="thumbnail" onclick="changeImage(0)">
+                    <img src="images/neomol-2.jpg" alt="Thumbnail 2" class="thumbnail" onclick="changeImage(1)">
+                    <img src="images/neomol-3.jpg" alt="Thumbnail 3" class="thumbnail" onclick="changeImage(2)">
+                </div>
+            </div>
+    
+            <div class="info-block col-8">
+                <div class="section-one">
+                    <div class="product-name">
+                        <h1>NEOMOL I.V Infusion 100ml</h1>   
+                    </div>
+                    
+                    <div class="important-info">
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span class="rating-number">3.9</span>
+                            <span class="review-count">(201)</span>
+                        </div>
+                        <div class="availability">
+                            <p class="stock-text">In Stock</p>
+                            <i class="fa fa-check-circle"></i>
+                        </div>
+                    </div>
+                    <div class="price">£8.36</div>                            
+                </div>
+
+                <div class="section-two">
+                    <div class="info-container">
+                        <div class="info-row">
+                            <span class="info-label">Generic Name</span>
+                            <span class="info-value">Acetaminophen</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Manufacturing Date</span>
+                            <span class="info-value">08/03/2021</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Expiry date</span>
+                            <span class="info-value">08/03/2023</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Location in store</span>
+                            <span class="info-value">TC-R3-S5</span>
+                        </div>
+                        
+                        <div class="info-row">
+                            <span class="info-label">Quantity</span>
+                            <span class="info-value">11 units</span>
+                        </div>
+
+                        <div class="info-row">
+                            <span class="info-label">Requires Prescription?</span>
+                            <span class="info-value">Yes</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Type of Medicine</span>
+                            <span class="info-value">Injections</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="more-info">More Information</div>
+
+        <div class="tab-container">
+            <div class="tab-names">
+                <div class="tab-link tab-1 active" onclick="openTab(event, 'Tab1')">
+                    <h2>Description</h2>
+                </div>
+                <div  class="tab-link tab-2" onclick="openTab(event, 'Tab2')">
+                    <h2>Ingredients</h2>
+                </div>
+                <div class="tab-link tab-3" onclick="openTab(event, 'Tab3')">
+                    <h2>Benefits</h2>
+                </div>
+                <div class="tab-link tab-4" onclick="openTab(event, 'Tab4')">
+                    <h2>Usage</h2>
+                </div>
+                <div class="tab-link tab-5" onclick="openTab(event, 'Tab5')">
+                    <h2>Precaution</h2>
+                </div>
+            </div>
+            <div class="tab-content">
+                <div id="Tab1" class="tab-content-item active">
+                    <p>Neomol I.V Infusion contains Paracetamol which belongs to the group of medicines called Analgesics and Antipyretics. It is used for short-term management of moderate pain (especially after surgery) and fever when administered by the intravenous route is clinically justified.</p>
+                    <p>Neomol I.V Infusion contains 'Paracetamol,' which prevents the formation of chemical messengers called prostaglandins, which cause pain and swelling at the injury sites. This process reduces the mild to moderate pain and inflammation at the injured or damaged site. Neomol Infusion also affects an area of the brain that regulates body temperature known as the hypothalamic heat-regulating centre. Thus, it reduces fever.</p>
+                    <p>Neomol I.V Infusion should be used with caution in pregnant and breastfeeding women only if clearly advised by the doctor. NEOMOL I.V INFUSION should be used with caution in children and elderly patients.</p>
+                </div>
+                <div id="Tab2" class="tab-content-item">
+                    <p>Paracetamol (Acetaminophen) 1000mg/100ml, Sodium (as sodium hydroxide): QS to adjust pH, Sterile water for injection.</p>              
+                </div>
+                <div id="Tab3" class="tab-content-item">
+                    <ul>
+                        <li>Provides effective pain relief during and after surgery.</li>
+                        <li>Reduces high fever quickly, especially when oral medications aren’t an option.</li>
+                        <li>Offers fast-acting relief through intravenous delivery.</li>
+                        <li>Safe option for patients with stomach sensitivity to oral medications.</li>
+                        <li>Can be used as part of multi-modal pain management.</li>
+                    </ul>
+                </div>
+                <div id="Tab4" class="tab-content-item">
+                    <p>Administered by a healthcare professional through an IV line. Dosage depends on the patient’s medical condition and response to treatment.</p>
+                </div>
+                <div id="Tab5" class="tab-content-item">
+                    <p>Your doctor or nurse will give you this medicine. Kindly do not self-administer.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-details">
+            <div class="visible-content">
+                <div class="info-item">
+                    <div class="field-label">Item Weight</div>
+                    <div class="field-value">115 g</div>
+                </div>
+                <div class="info-item">
+                    <div class="field-label">Shelf Life</div>
+                    <div class="field-value">720 days</div>
+                </div>
+                <div class="info-item">
+                    <div class="field-label">Country of Origin</div>
+                    <div class="field-value">India  </div>
+                </div>
+            </div>
+            <div class="hidden-content" style="display: none;">
+                <div class="info-item">
+                    <div class="field-label">HSN Code</div>
+                    <div class="field-value">30049069</div>
+                </div>
+                <div class="info-item">
+                    <div class="field-label">Name of Manufacturer</div>
+                    <div class="field-value">Neon Laboratories Ltd</div>
+                </div>
+                <div class="info-item">
+                    <div class="field-label">Address of Manufacturer</div>
+                    <div class="field-value">140, Damji Samji Industrial Complex, Mahakali Caves Rd., Andheri(East), Mumbai-93.</div>
+                </div>
+                <div class="info-item">
+                    <div class="field-label">Contact of Manufacturer</div>
+                    <div class="field-value">+(91) 22 6830 7000</div>
+                </div>
+            </div>
+            
+            <div class="show-more">
+                <button>
+                    <span onclick="showmorelessManufacturer()" id="moreless">
+                        Show more <img src="images/chevron_down_pink.svg">
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

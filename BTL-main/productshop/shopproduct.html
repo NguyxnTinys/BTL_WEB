@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pillcare Shop</title>
+
+    <link rel="stylesheet" href="/productshop/main.css">
+    <link rel="stylesheet" href="/productshop/base.css">
+    <link rel="stylesheet" href="/formauth/assets/style/nav.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./font/fontawesome-free-6.6.0-web/css/all.min.css">
+    <link rel="icon" href="./assets/img/Shopee-logo.jpg">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+            <!-- Logo bên trái -->
+            <div class="logo">
+                <img alt="Company Logo" src="/public/assets/image/logo.jpg" width="60px" height="60px"/>
+            </div>
+    
+            <!-- Nút toggle cho mobile -->
+            <button class="navbar-toggler d-lg-none" type="button" aria-label="Toggle navigation" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon">
+                    <img src="/public/assets/icons/SVG/8666802_menu_navigation_icon.svg" alt="">
+                </span>
+            </button>
+    
+            <!-- Navbar chính giữa -->
+            <nav class="navbar collapse" id="navbarNav">
+                <div class="navbar-links">
+                    <a href="/public/info/home/index.html">Trang chủ</a>
+                    <a href="/productshop/shopproduct.html" class="active">Cửa hàng</a>
+                    <a href="/productshop/sick.html">Tra cứu bệnh</a>
+                    <a href="/man/html/index_m.html">Quản lý</a>
+                </div>
+            </nav>
+    
+            <!-- Sign-in bên phải -->
+            <div class="user">
+                <a class="user-icon" href="#">
+                    <img src="/public/assets/icons/SVG/9024006_user_circle_fill_icon.svg" alt="">
+                </a>
+                <div class="navbar-signin">
+                    <a class="sign-in" href="/formauth/index.html">Sign in</a>
+                </div>
+            </div>
+        </div>
+    </header> 
+
+    <div class="navbar-mobile" id="navbarNavMobile">
+        <div class="navbar-links">
+            <a href="/public/info/home/index.html">Trang chủ</a>
+            <a href="/productshop/shopproduct.html" class="active">Cửa hàng</a>
+            <a href="/productshop/sick.html">Tra cứu bệnh</a>
+            <a href="/man/html/index_m.html">Quản lý</a>
+        </div>
+    </div>  
+
+
+
+
+    <section class="app_container">
+        <div class="grid">
+            <div class="grid__row app_content">
+                <div class="grid__column-2">
+                    <div class="category">
+                        <h3>Bộ lọc</h3>
+                        <div class="category_form">
+                            <h4>Khoảng giá</h4>
+                            <input type="text" placeholder="Tối thiểu">
+                            <input type="text" placeholder="Tối đa">
+                            <span>
+                                <button>Áp dụng</button>
+                            </span>
+                            <ul class="category-list-price">
+                                <li>
+                                    <input type="checkbox"> 
+                                    Dưới 100.000đ
+                                </li>
+                                <li>
+                                    <input type="checkbox"> 
+                                    100.000đ-300.000đ
+                                </li>
+                                <li>
+                                    <input type="checkbox"> 
+                                    Trên 500.000đ
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="category_trademark">
+                            <h4>Thương hiệu</h4>
+                            <input type="text" placeholder="Nhập tên thương hiệu">
+                            <ul class="category_trademark-list">
+                                <li>
+                                    <input type="checkbox"> Abbott
+                                </li>
+                                <li>
+                                    <input type="checkbox"> Công ty TNNH Dược
+                                </li>
+                                <li>
+                                    <input type="checkbox"> AstraZeneca 
+                                </li>
+                                <li>
+                                    <input type="checkbox"> GlaxoSmithKline
+                                </li>
+                                <li>
+                                    <input type="checkbox"> AbbVie
+                                </li>
+                                <li>
+                                    <input type="checkbox"> Eli Lilly and Company
+                                </li>
+                                <li>
+                                    <input type="checkbox"> Bristol-Myers Squibb
+                                </li>
+                                <li>
+                                    <input type="checkbox"> Pfizer 
+                                </li>
+                                <li>
+                                    <input type="checkbox"> AbbVie
+                                </li>
+                                <li>
+                                    <input type="checkbox"> AbbVie
+                                </li>
+                                
+                            </ul>
+                            <button class="see_more">Xem thêm</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class= "grid__column-10 ">
+                    <div class="home-filter">
+                        <span class="home-filter_label">Sắp xếp theo</span>
+                        <button class="btn">Phổ biến</button>
+                        <button class="btn btn--primary">Mới nhất</button>
+                        <button class="btn">Bán chạy</button>
+                        <div class="select-input">
+                            <span class="select-input-label">Giá</span>
+                            <i class=" select-input-label-icon fa-solid fa-chevron-down"></i>
+
+                            <!-- list option -->
+                            <ul class="select-input__list">
+                                <li class="select-input__item">
+                                    <a href="" class="select-input__link">Giá: Giá thấp đến cao </a>
+                                </li>
+                                <li class="select-input__item">
+                                    <a href="" class="select-input__link">Giá: Giá cao đến thấp </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div id="medicine" class="home-product section">
+                        <div class="grid__row">
+                        
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="see-more__product">
+            <button>Xem thêm</button>
+        </div>
+    
+    </section>
+
+    
+   
+    <footer class="footer">
+        <div class="footer-btm">
+            <div class="offline-store__container">
+                <img src="/public/assets/image/store-svgrepo-com.svg" alt="">
+                <div class="footer-content">
+                    <h3>10000+</h3>
+                    <p>Offline Stores</p>
+                </div>
+            </div>
+            <div class="offline-store__container">
+                <img src="/public/assets/image/location-pin-svgrepo-com.svg" alt="">
+                <div class="footer-content">
+                    <h3>40000+</h3>
+                    <p>Pincodes Served</p>
+                </div>
+            </div>
+            <div class="offline-store__container">
+                <img src="/public/assets/image/usercustomer.png" alt="">
+                <div class="footer-content">
+                    <h3>5M+ </h3>
+                    <p>Happy Customers</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-top">
+            <div class="footer-logo">
+                <img src="/public/assets/image/logohieuthuoc.png" alt="">
+            </div>
+            <div class="footer-txt">
+                <p>Netmeds.com is one of India's most trusted pharmacies, dispensing quality medicines at reasonable prices to over 9 million happy customers – PAN India.</p>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="row">
+                <div class="col grid__column-2-4">
+                    <div class="boxfooter">
+                        <h3>Company</h3>
+                        <ul class="boxfooter-list">
+                            <li>
+                                <a href="">About Netmeds</a>
+                            </li>
+                            <li>
+                                <a href="">Customers Speak</a>
+                            </li>
+                            <li>
+                                <a href="">In the News</a>
+                            </li>
+                            <li>
+                                <a href="">Career</a>
+                            </li>
+                            <li>
+                                <a href="">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col grid__column-2-4">
+                    <div class="boxfooter">
+                        <h3>Our policies</h3>
+                        <ul class="boxfooter-list">
+                            <li>
+                                <a href="">Terms and Conditions</a>
+                            </li>
+                            <li>
+                                <a href="">Privacy Policy</a>
+                            </li>
+                            <li>
+                                <a href="">Fees and Payments Policy</a>
+                            </li>
+                            <li>
+                                <a href="">Shipping and Delivery Policy</a>
+                            </li>
+                            <li>
+                                <a href="">Return, Refund and Cancellation Policy</a>
+                            </li>
+                            <li>
+                                <a href="">Editorial Policy</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col grid__column-2-4">
+                    <div class="boxfooter">
+                        <h3>Shopping</h3>
+                        <ul class="boxfooter-list">
+                            <li>
+                                <a href="">Browse by A-Z</a>
+                            </li>
+                            <li>
+                                <a href="">Browse by Manufacturers</a>
+                            </li>
+                            <li>
+                                <a href="">Health Articles</a>
+                            </li>
+                            <li>
+                                <a href="">Offers / Coupons</a>
+                            </li>
+                            <li>
+                                <a href="">FAQs</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col grid__column-2-4">
+                    <div class="boxfooter">
+                        <h3>Popular Categories</h3>
+                        <ul class="boxfooter-list">
+                            <li>
+                                <a href="">Fitness</a>
+                            </li>
+                            <li>
+                                <a href="">Devices</a>
+                            </li>
+                            <li>
+                                <a href="">Personal Care</a>
+                            </li>
+                            <li>
+                                <a href="">Ayurveda</a>
+                            </li>
+                            <li>
+                                <a href="">Treatments</a>
+                            </li>
+                            <li>
+                                <a href="">Sexual Wellness</a>
+                            </li>
+                            <li>
+                                <a href="">Surgicals</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="box-sub col grid__column-2-4">
+                    <div class="boxfooter">
+                        <h3>Subcribe To Our Newsletter</h3>
+                        <p>Get a free subscription to our health and fitness tip and stay tuned to our latest offers</p>
+                        <div class="box-input">
+                            <input type="text" placeholder="Enter your email address">
+                            <button><i class='bx bx-right-arrow-alt'></i></button>
+                        </div>
+                        <div class="box-sub__down-app">
+                            <a href="#">
+                                <img src="/public/assets/image/play_store.png" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="/public/assets/image/app_store.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box_pay">
+                <div class="boxfooter">
+                    <h3>Our Payment Partent</h3>
+                    <div class="our-partners">
+                        <img src="/public/assets/image/google-pay.svg" alt="">
+                        <img src="/public/assets/image/phonepe.svg" alt="">
+                        <img src="/public/assets/image/paytm.svg" alt="">
+                        <img src="/public/assets/image/simpl.svg" alt="">
+                        <img src="/public/assets/image/rupay.svg" alt="">
+                        <img src="/public/assets/image/visa.svg" alt="">
+                        <img src="/public/assets/image/mastercard.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="social-network">
+                <h3>My of socical</h3>
+                <div class="social-network-img">
+                    <span>
+                        <a href="">
+                            <img src="/public/assets/image/faceboook.svg" alt="">
+                        </a>
+                    </span>
+                    <span>
+                        <a href="">
+                            <img src="/public/assets/image/google.png" alt="">
+                        </a>
+                    </span>
+                    <span>
+                        <a href="">
+                            <img src="/public/assets/image/free-twitter-logo-icon-2429-thumb.png" alt="">
+                        </a>
+                    </span>
+                    <span>
+                        <a href="">
+                            <img src="/public/assets/image/Instagram_logo_2016.svg.webp" alt="">
+                        </a>
+                    </span>
+                </div>
+            </div>
+            <div class="copyblock">
+                <div class="copyblock-link">
+                    <a href="">Medicine</a>
+                </div>
+                <div class="copyblock-link">
+                    <a href="">Wellness</a>
+                </div>
+                <div class="copyblock-link">
+                    <a href="">Lab Tests</a>
+                </div>
+                <div class="copyblock-link">
+                    <a href="">Beauty</a>
+                </div>
+                <div class="copyblock-link">
+                    <a href="">Copyright© 2023. All Rights Reserved</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./main.js"></script>
+    <script src="/public/info/home/script.js"></script>
+
+</body>
+</html>

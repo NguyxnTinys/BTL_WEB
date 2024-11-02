@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Web Medical Management - Efficient Pharmacy Management">
+    <link rel="icon" type="image/jpg" href="../../assets/image/logo.jpg">
+    <meta property="og:description" content="Manage your pharmacy with ease. Track inventory, handle prescriptions, and serve your patients effectively.">
+    <meta property="og:image" content="../../assets/image/logo.jpg">
+    <meta property="og:url" content="https://example.com/pharmacy-management">
+    <meta property="og:type" content="website">
+    <title>Medical Management </title>
+    <!-- link css -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/formauth/assets/style/nav.css">
+    <link rel="stylesheet" href="/formauth/assets/style/footer.css">
+    <link rel="stylesheet" href="/formauth/assets/style/chat.css">
+    
+    <!-- link font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <!-- link icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM9A1j+eo0g9M4l4d6F12o0F31/3DgGJzT+0f" crossorigin="anonymous">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>   
+    <!-- link bootstrap -->
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" rel="stylesheet"/>
+    
+    <!-- link threejs -->
+    <script type="importmap">
+        {
+          "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.128.0/examples/jsm/"
+          }
+        }
+    </script>   
+</head>
+<body>
+    <header class="header">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+            <!-- Logo bên trái -->
+            <div class="logo">
+                <img alt="Company Logo" src="/public/assets/image/logo.jpg" width="60px" height="60px"/>
+            </div>
+    
+            <!-- Nút toggle cho mobile -->
+            <button class="navbar-toggler d-lg-none" type="button" aria-label="Toggle navigation" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon">
+                    <img src="/public/assets/icons/SVG/8666802_menu_navigation_icon.svg" alt="">
+                </span>
+            </button>
+    
+            <!-- Navbar chính giữa -->
+            <nav class="navbar collapse" id="navbarNav">
+                <div class="navbar-links">
+                    <a href="/public/info/home/index.html" class="active">Trang chủ</a>
+                    <a href="/productshop/shopproduct.html">Cửa hàng</a>
+                    <a href="/productshop/sick.html">Tra cứu bệnh</a>
+                    <a href="/man/html/index_m.html">Quản lý</a>
+                </div>
+            </nav>
+    
+            <!-- Sign-in bên phải -->
+            <div class="user">
+                <a class="user-icon" href="/formauth/profile.html">
+                    <img src="/public/assets/icons/SVG/9024006_user_circle_fill_icon.svg" alt="">
+                </a>
+                <div class="navbar-signin">
+                    <a class="sign-in" href="/formauth/index.html">Sign in</a>
+                </div>
+            </div>
+        </div>
+    </header> 
+
+    <div class="navbar-mobile" id="navbarNavMobile">
+        <div class="navbar-links">
+            <a href="/public/info/home/index.html" class="active">Trang chủ</a>
+            <a href="/productshop/shopproduct.html">Cửa hàng</a>
+            <a href="/productshop/sick.html">Tra cứu bệnh</a>
+            <a href="/man/html/index_m.html">Quản lý</a>
+        </div>
+    </div>  
+
+
+    <section class="home" id="home">
+        <div class="model-container">
+            <div class="model-display" id="model-display">
+            </div>
+            <div class="model-title">
+                <h2>Model Title</h2>
+            </div>
+            <div class="model-content">
+                <p>This is the content related to the 3D model.</p>
+            </div>
+        </div>
+        
+        <div class="navigation">
+            <button id="prev" class="nav-button" aria-label="Previous Model">
+                <img src="../../assets/icons/SVG/8665200_circle_arrow_left_icon.svg" alt="Previous">
+            </button>
+            <div class="size-model">
+                <button id="inc" class="inc">
+                    <img src="../../assets/icons/SVG/8666813_minus_circle_remove_icon.svg" alt="Increase">
+                </button>
+                <button id="dec" class="dec">
+                    <img src="../../assets/icons/SVG/8666718_plus_circle_icon.svg" alt="Decrease">
+                </button>
+            </div>
+            <button id="next" class="nav-button" aria-label="Next Model">
+                <img src="../../assets/icons/SVG/8665198_circle_arrow_right_icon.svg" alt="Next">
+            </button>
+        </div>
+    </section>
+
+    <section class="container-news" id="container-news">
+        <div class="title d-flex align-items-center mb-3">
+            <svg class="icon" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                <path fill="currentColor" d="M96 32C96 14.33 110.3 0 128 0C145.7 0 160 14.33 160 32V64H288V32C288 14.33 302.3 0 320 0C337.7 0 352 14.33 352 32V64H400C426.5 64 448 85.49 448 112V160H0V112C0 85.49 21.49 64 48 64H96V32zM448 464C448 490.5 426.5 512 400 512H48C21.49 512 0 490.5 0 464V192H448V464zM200 272V328H144C130.7 328 120 338.7 120 352C120 365.3 130.7 376 144 376H200V432C200 445.3 210.7 456 224 456C237.3 456 248 445.3 248 432V376H304C317.3 376 328 365.3 328 352C328 338.7 317.3 328 304 328H248V272C248 258.7 237.3 248 224 248C210.7 248 200 258.7 200 272z"/>
+            </svg>
+            <h4 class="ms-2 mb-0">Góc sức khỏe</h4>
+            <a class="ms-3 text-primary align-self-center" href="#">Xem tất cả
+                <svg class="feather feather-chevron-right" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                    <polyline points="9 18 15 12 9 6"/>
+                </svg>
+            </a>
+        </div>
+        <div class="badges mb-3">
+           <span class="badge">Dinh dưỡng</span>
+           <span class="badge">Phòng chữa bệnh</span>
+           <span class="badge">Người cao tuổi</span>
+           <span class="badge">Khỏe đẹp</span>
+           <span class="badge">Mẹ và bé</span>
+           <span class="badge">Giới tính</span>
+           <span class="badge">Tin tức khuyến mại</span>
+           <span class="badge">Tin tức sức khỏe</span>
+        </div>
+        <div class="row justify-content-center">
+            <div class="main1 col-md-7">
+                <div class="main">
+                    <div class="main-image"></div>
+                    <div class="mt-3">
+                        <span class="badge">Truyền thông 1</span>
+                        <h5>Ung thư thực quản: Phẫu thuật robot giảm xâm lấn, ngày 2 có thể uống nước</h5>
+                    </div>
+                </div>
+            
+                <div class="main">
+                    <div class="main-image"></div>
+                    <div class="mt-3">
+                        <span class="badge">Truyền thông 2</span>
+                        <h5>Phẫu thuật tim hở phức tạp và mạch máu cho bệnh nhân cao tuổi</h5>
+                    </div>
+                </div>
+
+                <div class="main">
+                    <div class="main-image"></div>
+                    <div class="mt-3">
+                        <span class="badge">Truyền thông 3</span>
+                        <h5>TPHCM: Chàng trai 20 tuổi ngất xỉu, gặp nguy hiểm sau khi liên tục tập gym</h5>
+                    </div>
+                </div>
+            
+                <div class="navigation">
+                    <button id="prev2" class="nav-button" aria-label="Previous Model">
+                        <img src="../../assets/icons/SVG/8665200_circle_arrow_left_icon.svg" alt="Previous">
+                    </button>
+                    <button id="next2" class="nav-button" aria-label="Next Model">
+                        <img src="../../assets/icons/SVG/8665198_circle_arrow_right_icon.svg" alt="Next">
+                    </button>
+                </div>
+            </div>           
+        
+            <div class="support col-md-5">
+                <div class="news-item">
+                    <img
+                        src="../../assets/image/news-s1.webp"
+                        alt="Thumbnail image"
+                        width="100"
+                        height="100"
+                    />
+                    <div class="s-content">
+                        <span class="badge">Truyền thông</span>
+                        <p>Loại thuốc mới trị trào ngược dạ dày thực quản (GERD)</p>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <img
+                        src="../../assets/image/news-s2.webp"
+                        alt="Thumbnail image"
+                        width="100"
+                        height="100"
+                    />
+                    <div class="s-content">
+                        <span class="badge">Truyền thông</span>
+                        <p>5 vitamin thiết yếu cho xương và răng chắc khoẻ</p>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <img
+                        src="../../assets/image/news-s3.webp"
+                        alt="Thumbnail image"
+                        width="100"
+                        height="100"
+                    />
+                    <div class="s-content">
+                        <span class="badge">Truyền thông</span>
+                        <p>Phê duyệt dovato trị HIV cho thanh thiếu niên</p>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <img
+                        src="../../assets/image/news-s4.webp"
+                        alt="Thumbnail image"
+                        width="100"
+                        height="100"
+                    />
+                    <div class="s-content">
+                        <span class="badge">Truyền thông</span>
+                        <p>Thuốc mới chữa bệnh máu khó đông</p>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <img
+                        src="../../assets/image/news-s5.webp"
+                        alt="Thumbnail image"
+                        width="100"
+                        height="100"
+                    />
+                    <div class="s-content">
+                        <span class="badge">Truyền thông</span>
+                        <p>Việt Nam chính thức có vaccine phòng sốt xuất huyết</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>  
+    
+    <section class="testimonial-section">
+        <h2> Top Feedback</h2>
+        <p>3.000 khách hàng đã tin tưởng ủng hộ sản phẩm của chúng tôi</p>
+        <div class="container" style="max-width: 80%;">
+    
+            <!-- Row 1: Hiển thị 3 testimonial cards -->
+            <div class="testimonial-row row-1">
+                <div class="testimonial-card">
+                    <div class="user-info-container">
+                        <div class="user-info">
+                            <img alt="User profile picture" height="50" src="https://storage.googleapis.com/a1aa/image/e7fSXhdvH6imp0WbnHfFYwFipYTxqQ5kVfTR6IozLUz4AfYdC.jpg" width="50"/>
+                            <div>
+                                <div class="user-name">Nguyxn Truong</div>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment">10đ BTL</div>
+                    <div class="read-more" onclick="toggleReadMore(this)">Xem thêm</div>
+                </div>
+    
+                <div class="testimonial-card">
+                    <div class="user-info-container">
+                        <div class="user-info">
+                            <img alt="User profile picture" height="50" src="https://storage.googleapis.com/a1aa/image/e7fSXhdvH6imp0WbnHfFYwFipYTxqQ5kVfTR6IozLUz4AfYdC.jpg" width="50"/>
+                            <div>
+                                <div class="user-name">Myx Hạnh</div>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment">Dịch vụ tốt, giao diện dễ nhìn, thông tin sản phẩm đầy đủ, đặc biệt thuốc chính hãng, chất lượng. Mình cũng hay lên đây đọc mấy bài viết về sức khỏe để bảo vệ bản thân và gia đình. Sẽ luôn tin tưởng và mua thuốc ở đây để bảo vệ sức khỏe trong thời gian tới.</div>
+                    <div class="read-more" onclick="toggleReadMore(this)">Xem thêm</div>
+                </div>
+    
+                <div class="testimonial-card">
+                    <div class="user-info-container">
+                        <div class="user-info">
+                            <img alt="User profile picture" height="50" src="https://storage.googleapis.com/a1aa/image/e7fSXhdvH6imp0WbnHfFYwFipYTxqQ5kVfTR6IozLUz4AfYdC.jpg" width="50"/>
+                            <div>
+                                <div class="user-name">Myx Hạnh</div>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment">Dịch vụ tốt, giao diện dễ nhìn, thông tin sản phẩm đầy đủ, đặc biệt thuốc chính hãng, chất lượng. Mình cũng hay lên đây đọc mấy bài viết về sức khỏe để bảo vệ bản thân và gia đình. Sẽ luôn tin tưởng và mua thuốc ở đây để bảo vệ sức khỏe trong thời gian tới.</div>
+                    <div class="read-more" onclick="toggleReadMore(this)">Xem thêm</div>
+                </div>
+            </div>
+    
+            <!-- Row 2: Hiển thị 2 testimonial cards -->
+            <div class="testimonial-row row-2">
+                <div class="testimonial-card">
+                    <div class="user-info-container">
+                        <div class="user-info">
+                            <img alt="User profile picture" height="50" src="https://storage.googleapis.com/a1aa/image/e7fSXhdvH6imp0WbnHfFYwFipYTxqQ5kVfTR6IozLUz4AfYdC.jpg" width="50"/>
+                            <div>
+                                <div class="user-name">Myx Hạnh</div>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment">Dịch vụ tốt, giao diện dễ nhìn, thông tin sản phẩm đầy đủ, đặc biệt thuốc chính hãng, chất lượng. Mình cũng hay lên đây đọc mấy bài viết về sức khỏe để bảo vệ bản thân và gia đình. Sẽ luôn tin tưởng và mua thuốc ở đây để bảo vệ sức khỏe trong thời gian tới.</div>
+                    <div class="read-more" onclick="toggleReadMore(this)">Xem thêm</div>
+                </div>
+    
+                <div class="testimonial-card">
+                    <div class="user-info-container">
+                        <div class="user-info">
+                            <img alt="User profile picture" height="50" src="https://storage.googleapis.com/a1aa/image/e7fSXhdvH6imp0WbnHfFYwFipYTxqQ5kVfTR6IozLUz4AfYdC.jpg" width="50"/>
+                            <div>
+                                <div class="user-name">Myx Hạnh</div>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment">Dịch vụ tốt, giao diện dễ nhìn, thông tin sản phẩm đầy đủ, đặc biệt thuốc chính hãng, chất lượng. Mình cũng hay lên đây đọc mấy bài viết về sức khỏe để bảo vệ bản thân và gia đình. Sẽ luôn tin tưởng và mua thuốc ở đây để bảo vệ sức khỏe trong thời gian tới.</div>
+                    <div class="read-more" onclick="toggleReadMore(this)">Xem thêm</div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="footer-btm">
+                <div class="offline-store__container">
+                    <img src="/public/assets/image/store-svgrepo-com.svg" alt="">
+                    <div class="footer-content">
+                        <h3>10000+</h3>
+                        <p>Offline Stores</p>
+                    </div>
+                </div>
+                <div class="offline-store__container">
+                    <img src="/public/assets/image/location-pin-svgrepo-com.svg" alt="">
+                    <div class="footer-content">
+                        <h3>40000+</h3>
+                        <p>Pincodes Served</p>
+                    </div>
+                </div>
+                <div class="offline-store__container">
+                    <img src="/public/assets/image/usercustomer.png" alt="">
+                    <div class="footer-content">
+                        <h3>5M+ </h3>
+                        <p>Happy Customers</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <img src="/public/assets/image/logohieuthuoc.png" alt="">
+                </div>
+                <div class="footer-txt">
+                    <p>Netmeds.com is one of India's most trusted pharmacies, dispensing quality medicines at reasonable prices to over 9 million happy customers – PAN India.</p>
+                </div>
+            </div>
+    
+            <div class="grid">
+                <div class="row">
+                    <div class="col grid__column-2-4">
+                        <div class="boxfooter">
+                            <h3>Company</h3>
+                            <ul class="boxfooter-list">
+                                <li>
+                                    <a href="">About Netmeds</a>
+                                </li>
+                                <li>
+                                    <a href="">Customers Speak</a>
+                                </li>
+                                <li>
+                                    <a href="">In the News</a>
+                                </li>
+                                <li>
+                                    <a href="">Career</a>
+                                </li>
+                                <li>
+                                    <a href="">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col grid__column-2-4">
+                        <div class="boxfooter">
+                            <h3>Our policies</h3>
+                            <ul class="boxfooter-list">
+                                <li>
+                                    <a href="">Terms and Conditions</a>
+                                </li>
+                                <li>
+                                    <a href="">Privacy Policy</a>
+                                </li>
+                                <li>
+                                    <a href="">Fees and Payments Policy</a>
+                                </li>
+                                <li>
+                                    <a href="">Shipping and Delivery Policy</a>
+                                </li>
+                                <li>
+                                    <a href="">Return, Refund and Cancellation Policy</a>
+                                </li>
+                                <li>
+                                    <a href="">Editorial Policy</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col grid__column-2-4">
+                        <div class="boxfooter">
+                            <h3>Shopping</h3>
+                            <ul class="boxfooter-list">
+                                <li>
+                                    <a href="">Browse by A-Z</a>
+                                </li>
+                                <li>
+                                    <a href="">Browse by Manufacturers</a>
+                                </li>
+                                <li>
+                                    <a href="">Health Articles</a>
+                                </li>
+                                <li>
+                                    <a href="">Offers / Coupons</a>
+                                </li>
+                                <li>
+                                    <a href="">FAQs</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col grid__column-2-4">
+                        <div class="boxfooter">
+                            <h3>Popular Categories</h3>
+                            <ul class="boxfooter-list">
+                                <li>
+                                    <a href="">Fitness</a>
+                                </li>
+                                <li>
+                                    <a href="">Devices</a>
+                                </li>
+                                <li>
+                                    <a href="">Personal Care</a>
+                                </li>
+                                <li>
+                                    <a href="">Ayurveda</a>
+                                </li>
+                                <li>
+                                    <a href="">Treatments</a>
+                                </li>
+                                <li>
+                                    <a href="">Sexual Wellness</a>
+                                </li>
+                                <li>
+                                    <a href="">Surgicals</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="box-sub col grid__column-2-4">
+                        <div class="boxfooter">
+                            <h3>Subcribe To Our Newsletter</h3>
+                            <p>Get a free subscription to our health and fitness tip and stay tuned to our latest offers</p>
+                            <div class="box-input">
+                                <input type="text" placeholder="Enter your email address">
+                                <button><i class='bx bx-right-arrow-alt'></i></button>
+                            </div>
+                            <div class="box-sub__down-app">
+                                <a href="#">
+                                    <img src="/public/assets/image/play_store.png" alt="">
+                                </a>
+                                <a href="#">
+                                    <img src="/public/assets/image/app_store.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box_pay">
+                    <div class="boxfooter">
+                        <h3>Our Payment Partent</h3>
+                        <div class="our-partners">
+                            <img src="/public/assets/image/google-pay.svg" alt="">
+                            <img src="/public/assets/image/phonepe.svg" alt="">
+                            <img src="/public/assets/image/paytm.svg" alt="">
+                            <img src="/public/assets/image/simpl.svg" alt="">
+                            <img src="/public/assets/image/rupay.svg" alt="">
+                            <img src="/public/assets/image/visa.svg" alt="">
+                            <img src="/public/assets/image/mastercard.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="social-network">
+                    <h3>My of socical</h3>
+                    <div class="social-network-img">
+                        <span>
+                            <a href="">
+                                <img src="/public/assets/image/faceboook.svg" alt="">
+                            </a>
+                        </span>
+                        <span>
+                            <a href="">
+                                <img src="/public/assets/image/google.png" alt="">
+                            </a>
+                        </span>
+                        <span>
+                            <a href="">
+                                <img src="/public/assets/image/free-twitter-logo-icon-2429-thumb.png" alt="">
+                            </a>
+                        </span>
+                        <span>
+                            <a href="">
+                                <img src="/public/assets/image/Instagram_logo_2016.svg.webp" alt="">
+                            </a>
+                        </span>
+                    </div>
+                </div>
+                <div class="copyblock">
+                    <div class="copyblock-link">
+                        <a href="">Medicine</a>
+                    </div>
+                    <div class="copyblock-link">
+                        <a href="">Wellness</a>
+                    </div>
+                    <div class="copyblock-link">
+                        <a href="">Lab Tests</a>
+                    </div>
+                    <div class="copyblock-link">
+                        <a href="">Beauty</a>
+                    </div>
+                    <div class="copyblock-link">
+                        <a href="">Copyright© 2023. All Rights Reserved</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </section>
+
+
+    <!-- chat-bot  -->
+    <button class="chatbot-toggler">
+        <span><i class='bx bx-comment'></i></span>
+        <span ><i class='bx bx-x'></i></span>
+    </button>
+
+    <div class="chatbot">
+        <header>
+            <h2>Chat với dược sỹ AH3T</h2>
+        </header>
+        <ul class="chatbox">
+            <li class="chat incoming">
+                <span><img src="/public/assets/image/avatar.webp" alt="" class="avatar"></span>
+                <p>Cảm ơn Anh/Chị đã liên hệ Nhà thuốc AH3T. Chúng mình có thể hỗ trợ gì cho quý khách hàng ạ.</p>
+            </li>
+
+            <li class="chat outgoing">
+                <p>Em muốn điểm cao BTL ^.^ </p>
+            </li>
+        </ul>
+        <div class="chat-input">
+            <span><i class='bx bx-dots-horizontal-rounded' ></i></span>
+            <span><i class='bx bx-link-alt'></i></span>
+            <textarea placeholder="Enter a message..." name="" id="" required></textarea>
+            <span id="send-btn"><i class='bx bx-send' ></i></span>
+        </div>
+    </div>
+
+
+    <script>
+        // Hàm để ẩn/hiện thông tin
+        function toggleReadMore(event) {
+            const button = event.currentTarget; // Lấy nút đã nhấn
+            const comment = button.previousElementSibling; // Lấy phần tử trước nút
+
+            // Kiểm tra trạng thái và thay đổi
+            if (comment.style.display === "none" || !comment.style.display) {
+                comment.style.display = "block"; // Hiện phần tử
+                button.textContent = "Thu gọn"; // Thay đổi văn bản nút
+            } else {
+                comment.style.display = "none"; // Ẩn phần tử
+                button.textContent = "Xem thêm"; // Thay đổi văn bản nút
+            }
+        }
+
+        // Khi trang được tải, gán sự kiện click cho các nút
+        window.addEventListener('DOMContentLoaded', () => {
+            // Lấy tất cả các nút "Xem thêm"
+            const buttons = document.querySelectorAll('.read-more');
+
+            // Gán sự kiện click cho từng nút
+            buttons.forEach(button => {
+                button.addEventListener('click', toggleReadMore);
+            });
+        });
+
+    </script>
+
+
+    <script type="module" src="./models.js"></script>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
